@@ -13,7 +13,7 @@ Team repo for Codepath Group assignment
 
 ### Core Use Cases
 
-**REQUIRED
+**REQUIRED**
 
 Login Flow
 
@@ -35,7 +35,7 @@ Settings
 * Logout
 * Notificaiton Settings
 
-**KEY USE CASES
+**KEY USE CASES**
 
 *Use case: User should be able to manage who they pay money to, and orient payment towards the people the interact with.*
 
@@ -89,7 +89,7 @@ Settings
   c. The amount you paid or you received for payment items, or the amount you will give back or will owe for bill items
   d. Time stamp item took place
   
-**OPTIONAL USE CASES
+**OPTIONAL USE CASES**
 
 1. Make notes and comments on bills or transactions (When creating a new item, or annotating an existing item the user should be able to add a comment that would notify the other parties involved)
 2. Read contacts from Venmo friends (User could import contacts and also see if that user has venmo, so that they can use that methodology to charge the other person)
