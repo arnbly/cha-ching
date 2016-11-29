@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sFX-ci-cuZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="zMR-0e-zWf">
+            <objects>
+                <viewController storyboardIdentifier="SettingsSB" id="sFX-ci-cuZ" customClass="SettingsViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pg5-XX-pne"/>
+                        <viewControllerLayoutGuide type="bottom" id="dIQ-rx-ao9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QgO-Pn-AWu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ir-0b-MdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="221"/>
+        </scene>
+        <!--Settings Edit View Controller-->
+        <scene sceneID="Y6B-CP-ueL">
+            <objects>
+                <viewController id="8fP-xC-AEe" customClass="SettingsEditViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWt-23-8jq"/>
+                        <viewControllerLayoutGuide type="bottom" id="yz0-Vm-Og7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pit-P7-Shh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWF-wy-jYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="221"/>
+        </scene>
+        <!--Settings Currency View Controller-->
+        <scene sceneID="vUX-Tk-eCq">
+            <objects>
+                <viewController id="FaB-jq-Zj6" customClass="SettingsCurrencyViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tOy-Xh-YeL"/>
+                        <viewControllerLayoutGuide type="bottom" id="C1e-Jh-iO8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VQw-xD-i2r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ruY-Rh-pFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1498" y="221"/>
+        </scene>
+    </scenes>
+</document>

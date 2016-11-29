@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R8K-sJ-pwW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Display-Medium.otf">
+            <string>SFCompactDisplay-Medium</string>
+        </array>
+        <array key="SF-Compact-Display-Thin.otf">
+            <string>SFCompactDisplay-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Tdt-Be-gLu">
+            <objects>
+                <viewController storyboardIdentifier="HomeSB" id="R8K-sJ-pwW" customClass="HomeViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OFY-5y-XRe"/>
+                        <viewControllerLayoutGuide type="bottom" id="MWS-iY-CrO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r2F-ei-cd7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="home-button-shell" translatesAutoresizingMaskIntoConstraints="NO" id="Ksv-ki-zk3">
+                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApP-sp-3Gb">
+                                <rect key="frame" x="4" y="599" width="179" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Add Bill">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-zk-Tb2">
+                                <rect key="frame" x="194" y="599" width="177" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="7" maxY="0.0"/>
+                                <state key="normal" title="Pay Back">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6IY-XO-GYd" userLabel="NavBarLight">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Split It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1x-N9-Rn1">
+                                        <rect key="frame" x="120" y="40" width="135" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l47-Ed-rtL">
+                                        <rect key="frame" x="15" y="30" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="settings-icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD4-ka-uae">
+                                        <rect key="frame" x="320" y="30" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="history-icon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Zq-LL-dK0" userLabel="LentView">
+                                <rect key="frame" x="20" y="181" width="339" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Lent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acs-nS-Aj3">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                        <color key="textColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOP-fV-48c">
+                                        <rect key="frame" x="-5" y="26" width="258" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Thin" family="SF Compact Display" pointSize="70"/>
+                                        <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="back-right-icon" translatesAutoresizingMaskIntoConstraints="NO" id="zmc-OK-VXt">
+                                        <rect key="frame" x="315" y="50" width="20" height="19"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TEA-wG-a7t" userLabel="OweView">
+                                <rect key="frame" x="20" y="308" width="339" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Owe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcR-aO-YxL">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                        <color key="textColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTI-iF-8hV">
+                                        <rect key="frame" x="-5" y="26" width="258" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Thin" family="SF Compact Display" pointSize="70"/>
+                                        <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="back-right-icon" translatesAutoresizingMaskIntoConstraints="NO" id="exE-37-dgf">
+                                        <rect key="frame" x="316" y="50" width="20" height="19"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5x-QV-PlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375.19999999999999" y="165.06746626686657"/>
+        </scene>
+        <!--Request View Controller-->
+        <scene sceneID="hjg-yF-gkC">
+            <objects>
+                <viewController id="EUd-DX-exX" customClass="RequestViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vja-mG-1HG"/>
+                        <viewControllerLayoutGuide type="bottom" id="fbJ-O0-dSO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C6X-z4-EyV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9AA-l9-msO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="627"/>
+        </scene>
+        <!--Transaction Detail View Controller-->
+        <scene sceneID="zco-2Z-C57">
+            <objects>
+                <viewController id="dZ5-cO-XFl" customClass="TransactionDetailViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dgI-JP-9fF"/>
+                        <viewControllerLayoutGuide type="bottom" id="zEF-5q-lub"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tSi-JV-wh1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dN5-Gp-xIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="627"/>
+        </scene>
+        <!--Owe View Controller-->
+        <scene sceneID="aTm-i7-lYF">
+            <objects>
+                <viewController id="xgL-W4-GBs" customClass="OweViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qN1-HA-IDW"/>
+                        <viewControllerLayoutGuide type="bottom" id="800-XK-uY0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rQx-r9-1Dm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c6p-FT-XKU" userLabel="NavBarDark">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I Owe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAz-eQ-R4j">
+                                        <rect key="frame" x="120" y="40" width="135" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHd-bN-VcU">
+                                        <rect key="frame" x="20" y="30" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="back-arrow-left-white"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYn-je-47v">
+                                        <rect key="frame" x="295" y="30" width="62" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                        <state key="normal" title=" Pay All" image="plus-icon-small">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxQ-4z-JaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464.80000000000001" y="-149.77511244377811"/>
+        </scene>
+        <!--Person Detail View Controller-->
+        <scene sceneID="QQt-kW-q2C">
+            <objects>
+                <viewController id="zPo-p6-Zy8" customClass="PersonDetailViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z0a-C3-dS2"/>
+                        <viewControllerLayoutGuide type="bottom" id="PLD-x6-8FB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kKa-zf-RDc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gM-6M-id6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="-150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back-arrow-left-white" width="20" height="19"/>
+        <image name="back-right-icon" width="20" height="19"/>
+        <image name="history-icon" width="30" height="30"/>
+        <image name="home-button-shell" width="375" height="68"/>
+        <image name="plus-icon-small" width="9" height="9"/>
+        <image name="settings-icon" width="30" height="30"/>
+    </resources>
+</document>
