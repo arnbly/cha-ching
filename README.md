@@ -7,9 +7,7 @@ Team repo for Codepath Group assignment
 
 
 ### Wireframes
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Image1 Description' width='' alt='Image1 Description' />
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Image2 Description' width='' alt='Image2 Description' />
-
+<img src='https://github.com/arnbly/cha-ching/blob/master/Wireframes-V1.png' title='Image1 Description' width='' alt='Image1 Description' />
 
 ### Core Use Cases
 
