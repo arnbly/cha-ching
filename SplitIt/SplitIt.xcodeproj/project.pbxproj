@@ -683,6 +683,7 @@
 				9316DCED1DED384600ED01E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9316DCEE1DED384600ED01E7 /* Build configuration list for PBXNativeTarget "SplitItTests" */ = {
 			isa = XCConfigurationList;
@@ -691,6 +692,7 @@
 				9316DCF01DED384600ED01E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9316DCF11DED384600ED01E7 /* Build configuration list for PBXNativeTarget "SplitItUITests" */ = {
 			isa = XCConfigurationList;
@@ -699,6 +701,7 @@
 				9316DCF31DED384600ED01E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
