@@ -35,13 +35,14 @@
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="26"/>
                                 <state key="normal" title="Sign In With Facebook" backgroundImage="primary-button-shell"/>
-                                <connections>
-                                    <segue destination="nH0-2B-klv" kind="push" id="oCq-BZ-BKM"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xpm-kI-9Tb"/>
+                    <connections>
+                        <segue destination="nH0-2B-klv" kind="push" identifier="welcomeSegue" id="DpZ-Et-aD0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

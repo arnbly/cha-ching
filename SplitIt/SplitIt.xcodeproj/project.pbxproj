@@ -45,6 +45,8 @@
 		9316DD361DED618900ED01E7 /* PaySuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD351DED618900ED01E7 /* PaySuccessViewController.swift */; };
 		9316DD381DED61E000ED01E7 /* SettingsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD371DED61E000ED01E7 /* SettingsEditViewController.swift */; };
 		9316DD3A1DED620000ED01E7 /* SettingsCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD391DED620000ED01E7 /* SettingsCurrencyViewController.swift */; };
+		9342B8901DF395470024B361 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342B88E1DF395470024B361 /* BaseTransition.swift */; };
+		9342B8911DF395470024B361 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342B88F1DF395470024B361 /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		9316DD351DED618900ED01E7 /* PaySuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaySuccessViewController.swift; sourceTree = "<group>"; };
 		9316DD371DED61E000ED01E7 /* SettingsEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsEditViewController.swift; sourceTree = "<group>"; };
 		9316DD391DED620000ED01E7 /* SettingsCurrencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCurrencyViewController.swift; sourceTree = "<group>"; };
+		9342B88E1DF395470024B361 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		9342B88F1DF395470024B361 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 				9316DD141DED5EDD00ED01E7 /* Settings */,
 				9316DCC61DED384600ED01E7 /* AppDelegate.swift */,
 				9316DCC81DED384600ED01E7 /* ViewController.swift */,
+				9342B88E1DF395470024B361 /* BaseTransition.swift */,
+				9342B88F1DF395470024B361 /* FadeTransition.swift */,
 				9316DCFE1DED3EB800ED01E7 /* Fonts */,
 				9316DCCD1DED384600ED01E7 /* Assets.xcassets */,
 				9316DCCF1DED384600ED01E7 /* LaunchScreen.storyboard */,
@@ -426,8 +432,10 @@
 				9316DD341DED617300ED01E7 /* PayReviewViewController.swift in Sources */,
 				9316DD2E1DED611100ED01E7 /* RequestReviewViewController.swift in Sources */,
 				9316DD3A1DED620000ED01E7 /* SettingsCurrencyViewController.swift in Sources */,
+				9342B8901DF395470024B361 /* BaseTransition.swift in Sources */,
 				9316DD381DED61E000ED01E7 /* SettingsEditViewController.swift in Sources */,
 				9316DD1A1DED5F3A00ED01E7 /* PayViewController.swift in Sources */,
+				9342B8911DF395470024B361 /* FadeTransition.swift in Sources */,
 				9316DD241DED5FFB00ED01E7 /* PersonDetailViewController.swift in Sources */,
 				9316DCC71DED384600ED01E7 /* AppDelegate.swift in Sources */,
 				9316DD181DED5F2700ED01E7 /* RequestViewController.swift in Sources */,
