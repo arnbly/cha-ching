@@ -8,8 +8,13 @@
 
 import UIKit
 
-class RequestViewController: UIViewController {
+class RequestViewController: UIViewController, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var youLentTotalDetailLabel: UILabel!
+    @IBOutlet weak var lentPeopleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +26,30 @@ class RequestViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didPanCell(_ sender: UIPanGestureRecognizer) {
 
-    /*
-    // MARK: - Navigation
+    }// End didPanCell
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    @IBAction func backTapped(_ sender: Any) {
+        
+    }// End backTapped Method
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
+        // ##### FIX ME #####
+        return 5
+    }// End tableView Method - For Setup
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lentTableViewCell") as! lentTableViewCell
+        
+        // ##### FIX ME #####
+        //        if let text = message["text"] as? String {
+        //            cell.chatLabel.text = text
+        //        }
+        
+        return cell
+    }// End tableView Method - For Setup
 
 }

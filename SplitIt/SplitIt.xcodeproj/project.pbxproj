@@ -22,7 +22,7 @@
 		9316DD011DED3EFC00ED01E7 /* SF-Compact-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9316DCFF1DED3EFC00ED01E7 /* SF-Compact-Text-Medium.otf */; };
 		9316DD021DED3EFC00ED01E7 /* SF-Compact-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9316DD001DED3EFC00ED01E7 /* SF-Compact-Text-Regular.otf */; };
 		9316DD041DED5D9100ED01E7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9316DD031DED5D9100ED01E7 /* Home.storyboard */; };
-		9316DD061DED5DB100ED01E7 /* RequestFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9316DD051DED5DB100ED01E7 /* RequestFlow.storyboard */; };
+		9316DD061DED5DB100ED01E7 /* RequestMoney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9316DD051DED5DB100ED01E7 /* RequestMoney.storyboard */; };
 		9316DD081DED5DBE00ED01E7 /* PayFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9316DD071DED5DBE00ED01E7 /* PayFlow.storyboard */; };
 		9316DD0A1DED5DD300ED01E7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9316DD091DED5DD300ED01E7 /* Settings.storyboard */; };
 		9316DD0C1DED5DDF00ED01E7 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9316DD0B1DED5DDF00ED01E7 /* History.storyboard */; };
@@ -47,6 +47,8 @@
 		9316DD3A1DED620000ED01E7 /* SettingsCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD391DED620000ED01E7 /* SettingsCurrencyViewController.swift */; };
 		9342B8901DF395470024B361 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342B88E1DF395470024B361 /* BaseTransition.swift */; };
 		9342B8911DF395470024B361 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342B88F1DF395470024B361 /* FadeTransition.swift */; };
+		9342B8931DF4F9F00024B361 /* owedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342B8921DF4F9F00024B361 /* owedTableViewCell.swift */; };
+		9342B8951DF4FA170024B361 /* lentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342B8941DF4FA170024B361 /* lentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +90,7 @@
 		9316DCFF1DED3EFC00ED01E7 /* SF-Compact-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Text-Medium.otf"; sourceTree = "<group>"; };
 		9316DD001DED3EFC00ED01E7 /* SF-Compact-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Text-Regular.otf"; sourceTree = "<group>"; };
 		9316DD031DED5D9100ED01E7 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		9316DD051DED5DB100ED01E7 /* RequestFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RequestFlow.storyboard; sourceTree = "<group>"; };
+		9316DD051DED5DB100ED01E7 /* RequestMoney.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RequestMoney.storyboard; sourceTree = "<group>"; };
 		9316DD071DED5DBE00ED01E7 /* PayFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PayFlow.storyboard; sourceTree = "<group>"; };
 		9316DD091DED5DD300ED01E7 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		9316DD0B1DED5DDF00ED01E7 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,8 @@
 		9316DD391DED620000ED01E7 /* SettingsCurrencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCurrencyViewController.swift; sourceTree = "<group>"; };
 		9342B88E1DF395470024B361 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		9342B88F1DF395470024B361 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		9342B8921DF4F9F00024B361 /* owedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = owedTableViewCell.swift; sourceTree = "<group>"; };
+		9342B8941DF4FA170024B361 /* lentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				9316DD031DED5D9100ED01E7 /* Home.storyboard */,
+				9342B8921DF4F9F00024B361 /* owedTableViewCell.swift */,
+				9342B8941DF4FA170024B361 /* lentTableViewCell.swift */,
 				9316DD211DED5FD400ED01E7 /* OweViewController.swift */,
 				9316DD231DED5FFB00ED01E7 /* PersonDetailViewController.swift */,
 				9316DD251DED603300ED01E7 /* RequestedViewController.swift */,
@@ -238,7 +244,7 @@
 		9316DD111DED5EC500ED01E7 /* Request Money */ = {
 			isa = PBXGroup;
 			children = (
-				9316DD051DED5DB100ED01E7 /* RequestFlow.storyboard */,
+				9316DD051DED5DB100ED01E7 /* RequestMoney.storyboard */,
 				9316DD291DED60B100ED01E7 /* RequestSplitViewController.swift */,
 				9316DD2B1DED60D600ED01E7 /* RequestWithViewController.swift */,
 				9316DD2D1DED611100ED01E7 /* RequestReviewViewController.swift */,
@@ -394,7 +400,7 @@
 				9316DCD11DED384600ED01E7 /* LaunchScreen.storyboard in Resources */,
 				9316DCFC1DED3EA900ED01E7 /* SF-Compact-Display-Regular.otf in Resources */,
 				9316DD021DED3EFC00ED01E7 /* SF-Compact-Text-Regular.otf in Resources */,
-				9316DD061DED5DB100ED01E7 /* RequestFlow.storyboard in Resources */,
+				9316DD061DED5DB100ED01E7 /* RequestMoney.storyboard in Resources */,
 				9316DCCE1DED384600ED01E7 /* Assets.xcassets in Resources */,
 				9316DD0C1DED5DDF00ED01E7 /* History.storyboard in Resources */,
 				9316DCFB1DED3EA900ED01E7 /* SF-Compact-Display-Medium.otf in Resources */,
@@ -438,8 +444,10 @@
 				9342B8911DF395470024B361 /* FadeTransition.swift in Sources */,
 				9316DD241DED5FFB00ED01E7 /* PersonDetailViewController.swift in Sources */,
 				9316DCC71DED384600ED01E7 /* AppDelegate.swift in Sources */,
+				9342B8931DF4F9F00024B361 /* owedTableViewCell.swift in Sources */,
 				9316DD181DED5F2700ED01E7 /* RequestViewController.swift in Sources */,
 				9316DD301DED612800ED01E7 /* RequestSuccessViewController.swift in Sources */,
+				9342B8951DF4FA170024B361 /* lentTableViewCell.swift in Sources */,
 				9316DD2A1DED60B100ED01E7 /* RequestSplitViewController.swift in Sources */,
 				9316DCF51DED3C4A00ED01E7 /* SignInViewController.swift in Sources */,
 				9316DD221DED5FD400ED01E7 /* OweViewController.swift in Sources */,

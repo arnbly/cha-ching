@@ -29,7 +29,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CuP-aR-jOl">
             <objects>
-                <navigationController id="Wwz-5B-t4M" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="Wwz-5B-t4M" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="s84-ri-Rl9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -87,12 +87,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l47-Ed-rtL">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l47-Ed-rtL" userLabel="settingsBtn">
                                         <rect key="frame" x="15" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="settings-icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD4-ka-uae">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD4-ka-uae" userLabel="historyBtn">
                                         <rect key="frame" x="320" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="history-icon"/>
@@ -118,7 +118,7 @@
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="back-right-icon" translatesAutoresizingMaskIntoConstraints="NO" id="zmc-OK-VXt">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="back-right-icon" translatesAutoresizingMaskIntoConstraints="NO" id="zmc-OK-VXt" userLabel="toYouOwe">
                                         <rect key="frame" x="315" y="50" width="20" height="19"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
@@ -146,7 +146,7 @@
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="back-right-icon" translatesAutoresizingMaskIntoConstraints="NO" id="exE-37-dgf">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="back-right-icon" translatesAutoresizingMaskIntoConstraints="NO" id="exE-37-dgf" userLabel="toYouLent">
                                         <rect key="frame" x="316" y="50" width="20" height="19"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
@@ -160,6 +160,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ORc-88-jdw"/>
+                    <connections>
+                        <outlet property="youLentTotalLabel" destination="hOP-fV-48c" id="owp-QG-MGi"/>
+                        <outlet property="youOweTotalLabel" destination="HTI-iF-8hV" id="1tg-aa-G7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5x-QV-PlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="AoE-wA-8YW" userLabel="tapLentGestureRec">
@@ -202,6 +206,9 @@
                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-arrow-left-white"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="EUd-DX-exX" eventType="touchUpInside" id="flu-95-xru"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -235,13 +242,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="rLd-Qw-UhB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="rLd-Qw-UhB" customClass="lentTableViewCell" customModule="SplitIt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rLd-Qw-UhB" id="kK9-lU-wOd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ug4-68-euy">
+                                                    <rect key="frame" x="0.0" y="-1" width="375" height="95"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sG9-CM-qX5" userLabel="tileView">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -287,9 +298,21 @@
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="fxp-W0-fUU" appends="YES" id="kak-BN-7WO"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="0Pt-dR-6cV" id="x5i-2f-YH4"/>
+                                            <outlet property="cellBackgroundView" destination="ug4-68-euy" id="QhL-N4-rcW"/>
+                                            <outlet property="cellView" destination="sG9-CM-qX5" id="7Gb-FX-mDp"/>
+                                            <outlet property="descriptionLabel" destination="pvM-wa-l0n" id="txL-Hw-uNG"/>
+                                            <outlet property="profileImage" destination="Wjn-Fo-SSe" id="dok-Dx-tTT"/>
+                                            <outlet property="userLentLabel" destination="q48-MC-eQa" id="RWT-DY-zQa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -297,10 +320,18 @@
                         <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="lentPeopleLabel" destination="yHL-Xo-1lg" id="nGC-yZ-O0J"/>
+                        <outlet property="tableView" destination="yem-hY-9Cc" id="YZC-vu-thh"/>
+                        <outlet property="youLentTotalDetailLabel" destination="kMz-lS-0DF" id="XLA-mI-6Kj"/>
                         <segue destination="dZ5-cO-XFl" kind="show" identifier="editTransactionDetailView" id="v86-eJ-tTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AA-l9-msO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="fxp-W0-fUU">
+                    <connections>
+                        <action selector="didPanCell:" destination="EUd-DX-exX" id="OQA-dh-k1A"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="414" y="627"/>
         </scene>
@@ -331,6 +362,9 @@
                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-arrow-left-white"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="dZ5-cO-XFl" eventType="touchUpInside" id="dnZ-fq-WSE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -417,6 +451,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="amountInput" destination="Fi3-GQ-rFd" id="AyF-W5-UCQ"/>
+                        <outlet property="forInput" destination="paR-H4-6eO" id="FgX-cE-COr"/>
+                        <outlet property="lentInput" destination="Nj4-KB-3OR" id="Uar-Aa-gBv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dN5-Gp-xIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -449,6 +488,9 @@
                                         <rect key="frame" x="11" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-arrow-left-white"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="xgL-W4-GBs" eventType="touchUpInside" id="Uo2-Pl-vy0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYn-je-47v">
                                         <rect key="frame" x="295" y="30" width="62" height="40"/>
@@ -457,6 +499,9 @@
                                         <state key="normal" title=" Pay All" image="plus-icon-small">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="payAllTapped:" destination="xgL-W4-GBs" eventType="touchUpInside" id="fCw-yf-SHw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -490,13 +535,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="NGi-Le-1mf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="NGi-Le-1mf" customClass="owedTableViewCell" customModule="SplitIt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGi-Le-1mf" id="Xci-je-UsH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfj-Ht-grn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0JR-Vs-kYg" userLabel="tileView">
                                                     <rect key="frame" x="0.0" y="-1" width="375" height="95"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -528,9 +577,21 @@
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="BF4-wq-zQD" appends="YES" id="wLs-4u-gIc"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="nIj-35-Up5" id="fBO-4K-6bD"/>
+                                            <outlet property="cellBackgroundView" destination="Gfj-Ht-grn" id="zLf-Ii-yfv"/>
+                                            <outlet property="cellView" destination="0JR-Vs-kYg" id="a0G-sy-a18"/>
+                                            <outlet property="descriptionLabel" destination="vQI-3H-VGg" id="6c5-fq-ULY"/>
+                                            <outlet property="profileImage" destination="Olx-ge-RGT" id="7sT-R0-SDb"/>
+                                            <outlet property="userOwedLabel" destination="V2g-1R-bue" id="xxJ-K4-onk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -540,10 +601,19 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cellView" destination="NGi-Le-1mf" id="TMy-Ia-kmp"/>
+                        <outlet property="owedPeopleLabel" destination="fG1-pQ-sZr" id="UuC-bn-atv"/>
+                        <outlet property="tableView" destination="UGp-Au-U77" id="dI0-4H-zUc"/>
+                        <outlet property="youOweTotalDetaiLabel" destination="JmR-5z-BxJ" id="VKh-oQ-wJO"/>
                         <segue destination="zPo-p6-Zy8" kind="show" identifier="oweDetailViewSegue" id="lEB-uD-cq6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WxQ-4z-JaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="BF4-wq-zQD">
+                    <connections>
+                        <action selector="didPanCell:" destination="xgL-W4-GBs" id="Whi-VP-B7s"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="414" y="-151"/>
         </scene>
@@ -567,6 +637,9 @@
                                         <rect key="frame" x="10" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-arrow-left-white"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="zPo-p6-Zy8" eventType="touchUpInside" id="VWm-Rv-PZS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBe-ez-ImI">
                                         <rect key="frame" x="295" y="30" width="62" height="40"/>
@@ -575,6 +648,9 @@
                                         <state key="normal" title=" Pay All" image="plus-icon-small">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="payAllTapped:" destination="zPo-p6-Zy8" eventType="touchUpInside" id="vfu-Z7-4n8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -618,13 +694,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="UZH-VJ-uLE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="UZH-VJ-uLE" customClass="owedTableViewCell" customModule="SplitIt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UZH-VJ-uLE" id="XwK-Jr-GXu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19L-Fk-TKR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93G-AQ-O0d" userLabel="tileView">
                                                     <rect key="frame" x="0.0" y="-1" width="375" height="95"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -656,9 +736,21 @@
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="xYC-Mi-GgE" appends="YES" id="q6n-ES-xaX"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="nEY-ZD-ndt" id="42Q-N6-czd"/>
+                                            <outlet property="cellBackgroundView" destination="19L-Fk-TKR" id="u3X-kJ-nrR"/>
+                                            <outlet property="cellView" destination="93G-AQ-O0d" id="uG0-kZ-bHR"/>
+                                            <outlet property="descriptionLabel" destination="QEk-ub-Vnz" id="3Yx-gx-3a8"/>
+                                            <outlet property="profileImage" destination="cpl-Nb-V1K" id="kUP-fk-MRs"/>
+                                            <outlet property="userOwedLabel" destination="Cs2-rr-y2V" id="TSn-U7-GUl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -666,8 +758,16 @@
                         <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="tableView" destination="7dx-XY-Ytg" id="doi-A6-g00"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gM-6M-id6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="xYC-Mi-GgE">
+                    <connections>
+                        <action selector="didPanCell:" destination="zPo-p6-Zy8" id="d4h-34-Obk"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1232.8" y="-150.67466266866569"/>
         </scene>

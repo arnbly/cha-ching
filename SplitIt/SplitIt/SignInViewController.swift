@@ -21,6 +21,11 @@ class SignInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func loginTapped(_ sender: Any) {
+        performSegue(withIdentifier: "welcomeSegue", sender: nil)
+    
+    
+    }//End loginTapped Method
 
     /*
     // MARK: - Navigation
