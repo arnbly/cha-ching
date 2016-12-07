@@ -56,8 +56,11 @@
 		9316DD321DED615900ED01E7 /* PayToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD311DED615900ED01E7 /* PayToViewController.swift */; };
 		9316DD341DED617300ED01E7 /* PayReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD331DED617300ED01E7 /* PayReviewViewController.swift */; };
 		9316DD361DED618900ED01E7 /* PaySuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD351DED618900ED01E7 /* PaySuccessViewController.swift */; };
-		9316DD381DED61E000ED01E7 /* SettingsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD371DED61E000ED01E7 /* SettingsEditViewController.swift */; };
 		9316DD3A1DED620000ED01E7 /* SettingsCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD391DED620000ED01E7 /* SettingsCurrencyViewController.swift */; };
+		931DAC211DF7D7DC00D21BDC /* SettingsEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC201DF7D7DC00D21BDC /* SettingsEmailViewController.swift */; };
+		931DAC231DF7D7FA00D21BDC /* SettingsNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC221DF7D7FA00D21BDC /* SettingsNameViewController.swift */; };
+		931DAC251DF8853A00D21BDC /* SettingsPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */; };
+		931DAC281DF892E100D21BDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 931DAC271DF892E100D21BDC /* GoogleService-Info.plist */; };
 		9ECF8C5084C77E9378393D98 /* Pods_SplitIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */; };
 		B45B9CC5148C59778CB60133 /* Pods_SplitItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */; };
 		C75F8874A7983DDE8E5D9475 /* Pods_SplitItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1A3A76367C4EDBA2FE6111 /* Pods_SplitItTests.framework */; };
@@ -141,8 +144,12 @@
 		9316DD311DED615900ED01E7 /* PayToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayToViewController.swift; sourceTree = "<group>"; };
 		9316DD331DED617300ED01E7 /* PayReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayReviewViewController.swift; sourceTree = "<group>"; };
 		9316DD351DED618900ED01E7 /* PaySuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaySuccessViewController.swift; sourceTree = "<group>"; };
-		9316DD371DED61E000ED01E7 /* SettingsEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsEditViewController.swift; sourceTree = "<group>"; };
 		9316DD391DED620000ED01E7 /* SettingsCurrencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCurrencyViewController.swift; sourceTree = "<group>"; };
+		931DAC201DF7D7DC00D21BDC /* SettingsEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsEmailViewController.swift; sourceTree = "<group>"; };
+		931DAC221DF7D7FA00D21BDC /* SettingsNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNameViewController.swift; sourceTree = "<group>"; };
+		931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPhoneViewController.swift; sourceTree = "<group>"; };
+		931DAC261DF88D3500D21BDC /* SplitIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SplitIt.entitlements; sourceTree = "<group>"; };
+		931DAC271DF892E100D21BDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SplitIt/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97888E0E6E88B3978B11B721 /* Pods-SplitItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItTests/Pods-SplitItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +223,8 @@
 				FDF8A165B8B65050508E0659 /* Pods */,
 				35B05BFF5DC62DC547834A35 /* Frameworks */,
 				3DE1CE071DF740CA00B95344 /* SplitIt-Bridging-Header.h */,
+				931DAC261DF88D3500D21BDC /* SplitIt.entitlements */,
+				931DAC271DF892E100D21BDC /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -344,7 +353,9 @@
 			isa = PBXGroup;
 			children = (
 				9316DD091DED5DD300ED01E7 /* Settings.storyboard */,
-				9316DD371DED61E000ED01E7 /* SettingsEditViewController.swift */,
+				931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */,
+				931DAC221DF7D7FA00D21BDC /* SettingsNameViewController.swift */,
+				931DAC201DF7D7DC00D21BDC /* SettingsEmailViewController.swift */,
 				9316DD391DED620000ED01E7 /* SettingsCurrencyViewController.swift */,
 				9316DD1D1DED5F6800ED01E7 /* SettingsViewController.swift */,
 			);
@@ -483,6 +494,7 @@
 			files = (
 				9316DCFD1DED3EA900ED01E7 /* SF-Compact-Display-Thin.otf in Resources */,
 				9316DD041DED5D9100ED01E7 /* Home.storyboard in Resources */,
+				931DAC281DF892E100D21BDC /* GoogleService-Info.plist in Resources */,
 				9316DCFA1DED3EA900ED01E7 /* SF-Compact-Display-Light.otf in Resources */,
 				9316DD081DED5DBE00ED01E7 /* PayFlow.storyboard in Resources */,
 				9316DCD11DED384600ED01E7 /* LaunchScreen.storyboard in Resources */,
@@ -665,13 +677,15 @@
 				9316DD341DED617300ED01E7 /* PayReviewViewController.swift in Sources */,
 				9316DD2E1DED611100ED01E7 /* RequestReviewViewController.swift in Sources */,
 				9316DD3A1DED620000ED01E7 /* SettingsCurrencyViewController.swift in Sources */,
-				9316DD381DED61E000ED01E7 /* SettingsEditViewController.swift in Sources */,
+				931DAC211DF7D7DC00D21BDC /* SettingsEmailViewController.swift in Sources */,
 				9316DD1A1DED5F3A00ED01E7 /* PayViewController.swift in Sources */,
+				931DAC251DF8853A00D21BDC /* SettingsPhoneViewController.swift in Sources */,
 				9316DD241DED5FFB00ED01E7 /* PersonDetailViewController.swift in Sources */,
 				9316DCC71DED384600ED01E7 /* AppDelegate.swift in Sources */,
 				3D4DCF671DF3931A00CDF846 /* FriendsCell.swift in Sources */,
 				9316DD181DED5F2700ED01E7 /* RequestViewController.swift in Sources */,
 				9316DD301DED612800ED01E7 /* RequestSuccessViewController.swift in Sources */,
+				931DAC231DF7D7FA00D21BDC /* SettingsNameViewController.swift in Sources */,
 				9316DD2A1DED60B100ED01E7 /* RequestSplitViewController.swift in Sources */,
 				9316DCF51DED3C4A00ED01E7 /* SignInViewController.swift in Sources */,
 				3D731F241DF6959A00CE76E8 /* NewTableViewCell.swift in Sources */,
