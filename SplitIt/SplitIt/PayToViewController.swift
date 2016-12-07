@@ -98,20 +98,26 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if (self.resultSearchController.isActive) {
             cell.userName.text = filteredTableData[indexPath.row]
+            cell.isActuallyChecked.isHidden = true
+            cell.isChecked.isHidden = false
             return cell
         }
         else {
             cell.userName.text = recents[indexPath.row]
+            cell.isActuallyChecked.isHidden = true
+            cell.isChecked.isHidden = false
             return cell
+            
         }
         
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.row)!")
         
         var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath as IndexPath)!
-        selectedCell.contentView.backgroundColor = UIColor.red
+        selectedCell.contentView.backgroundColor = UIColor(red:0.50, green:0.57, blue:1.00, alpha:1.0)
         }
     
     
