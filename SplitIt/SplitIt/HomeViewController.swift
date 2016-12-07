@@ -10,9 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var youLentTotalLabel: UILabel!
-    @IBOutlet weak var youOweTotalLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +20,31 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func didPressPay(_ sender: Any) {
+        
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "PayFlow", bundle: nil)
+        
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "PayFlowSB") as UIViewController
+        
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func didPressRequest(_ sender: Any) {
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "RequestFlow", bundle: nil)
+        
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "RequestFlowSB") as UIViewController
+        
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
+    }
+
     
 
 }

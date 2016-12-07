@@ -8,48 +8,58 @@
 
 import UIKit
 
-class RequestViewController: UIViewController, UITableViewDataSource {
+class RequestViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var youLentTotalDetailLabel: UILabel!
-    @IBOutlet weak var lentPeopleLabel: UILabel!
+    @IBOutlet weak var lentField: UITextField!
+    @IBOutlet weak var forField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destinationViewController = segue.destination as! RequestWithViewController
+        
+        destinationViewController.text = lentField.text
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        nextButton.alpha = 0
     }
     
-    @IBAction func didPanCell(_ sender: UIPanGestureRecognizer) {
-
-    }// End didPanCell
-
-    @IBAction func backTapped(_ sender: Any) {
-        
-    }// End backTapped Method
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    @IBAction func firstBackArrow(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func didPressX(_ sender: Any) {
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
         
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "HomeSB") as UIViewController
         
-        // ##### FIX ME #####
-        return 5
-    }// End tableView Method - For Setup
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
+    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lentTableViewCell") as! lentTableViewCell
-        
-        // ##### FIX ME #####
-        //        if let text = message["text"] as? String {
-        //            cell.chatLabel.text = text
-        //        }
-        
-        return cell
-    }// End tableView Method - For Setup
+    
+    @IBAction func lentField(_ sender: Any) {
+        if let text = lentField.text, !text.isEmpty || (forField.text != nil), !text.isEmpty
+        {
+            //do something if it's not empty
+            UIView.animate(withDuration: 0.3, delay: 0.3, options: [.curveEaseIn], animations: {
+                self.nextButton.alpha = 1
+            }, completion: nil)
+            
+        }
+    }
+    
+
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 
 }

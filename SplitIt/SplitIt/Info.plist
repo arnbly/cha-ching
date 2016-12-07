@@ -20,10 +20,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-Compact-Display-Thin.otf</string>
+		<string>SF-Compact-Display-Regular.otf</string>
+		<string>SF-Compact-Display-Medium.otf</string>
+		<string>SF-Compact-Display-Light.otf</string>
+		<string>SF-Compact-Text-Regular.otf</string>
+		<string>SF-Compact-Text-Medium.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>PayFlow</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -33,15 +42,6 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>SF-Compact-Display-Thin.otf</string>
-		<string>SF-Compact-Display-Regular.otf</string>
-		<string>SF-Compact-Display-Medium.otf</string>
-		<string>SF-Compact-Display-Light.otf</string>
-		<string>SF-Compact-Text-Regular.otf</string>
-		<string>SF-Compact-Text-Medium.otf</string>
 	</array>
 </dict>
 </plist>

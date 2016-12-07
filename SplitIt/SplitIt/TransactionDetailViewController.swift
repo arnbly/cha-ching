@@ -10,10 +10,6 @@ import UIKit
 
 class TransactionDetailViewController: UIViewController {
 
-    @IBOutlet weak var lentInput: UITextField!
-    @IBOutlet weak var amountInput: UILabel!
-    @IBOutlet weak var forInput: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,9 +20,16 @@ class TransactionDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
-    @IBAction func backTapped(_ sender: Any) {
-        
-    }// End backTapped Method
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
