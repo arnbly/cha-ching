@@ -21,15 +21,17 @@ class PaySuccessViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "HomeSB") as UIViewController
+        
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
     }
-    */
+
 
 }
