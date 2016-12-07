@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //TODO: - Enter your credentials
         PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction: "AfGL2IUzIMeXKu_B76ZPwqj_k0PVTMXTjSOs-dexOhsaOeWfG7FJAL6DH_IoZJgCLTKw_dmXcBsWn_5e",
                                                                 PayPalEnvironmentSandbox: "ltindal19-facilitator@gmail.com"])
+        
+        
+        FIRApp.configure()
+        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        
+        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        
+        return handled
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

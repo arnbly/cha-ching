@@ -6,6 +6,15 @@ target 'SplitIt' do
   use_frameworks!
   pod 'PayPal-iOS-SDK'
 
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
+
+
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+
   # Pods for SplitIt
 
   target 'SplitItTests' do
