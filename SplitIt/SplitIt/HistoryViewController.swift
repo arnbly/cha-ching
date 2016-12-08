@@ -15,10 +15,13 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var text: String!
     let names = ["Amrutha Krishnan", "Lauren Tindal"]
-    let desc = [" Utilities", "Dinner"]
-    let amt = ["$60","$15"]
+    let desc = [" Utilities", "Dinner","Dinner and Drinks","Lunch","Grocery"]
+    let amt = ["$15","$15","$20", "$12","$10"]
 
     var digits = [Int]()
+    
+    var userData: UserDataViewController = UserDataViewController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +48,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return names.count
+        return 1
     
     }
     
@@ -53,12 +56,16 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell = historyTableView.dequeueReusableCell(withIdentifier: "HistoryFriendsCellView") as! HistoryFriendsCellViewTableViewCell
         
+       
         
-        
-        cell.userName.text = names[indexPath.row]
+        cell.userName.text = userData.userNames[indexPath.row]
         cell.amount.text = amt[indexPath.row]
         cell.amountFor.text = desc[indexPath.row]
    
+        cell.userProfilePicture.layer.cornerRadius = cell.userProfilePicture.frame.size.width/2
+        cell.userProfilePicture.clipsToBounds = true
+        
+        cell.userProfilePicture.image = userData.splitProfile[indexPath.row]
         
         
         return cell
