@@ -44,10 +44,6 @@ class SettingsCurrencyViewController: UIViewController {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
     
     
     @IBAction func dismissSettingsCurrencyViewControllerButton(_ sender: AnyObject) {
@@ -97,9 +93,11 @@ class SettingsCurrencyViewController: UIViewController {
         
         let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
         let settingscontroller = settingsstoryboard.instantiateViewController(withIdentifier:
-            "SettingsInitialController") as! SettingsViewController
+            "SettingsSB") as! SettingsViewController
         settingscontroller.curr = currency
-        dismiss(animated: true, completion: nil)
+        print("settingsController.curr:", settingscontroller.curr)
+        
+        self.present(settingscontroller, animated: true, completion: nil)
         
         
     }

@@ -20,6 +20,7 @@
 		3DE1CE1A1DF741B500B95344 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE1CE111DF741B500B95344 /* SafariServices.framework */; };
 		3DE1CE1B1DF741B500B95344 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE1CE121DF741B500B95344 /* SystemConfiguration.framework */; };
 		3DE1CE1D1DF751A900B95344 /* NewFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1CE1C1DF751A900B95344 /* NewFriendsCell.swift */; };
+		7D05F3D11DF8BE7F0043E4F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D05F3D01DF8BE7F0043E4F2 /* GoogleService-Info.plist */; };
 		9316DCC71DED384600ED01E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DCC61DED384600ED01E7 /* AppDelegate.swift */; };
 		9316DCC91DED384600ED01E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DCC81DED384600ED01E7 /* ViewController.swift */; };
 		9316DCCC1DED384600ED01E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9316DCCA1DED384600ED01E7 /* Main.storyboard */; };
@@ -60,7 +61,6 @@
 		931DAC211DF7D7DC00D21BDC /* SettingsEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC201DF7D7DC00D21BDC /* SettingsEmailViewController.swift */; };
 		931DAC231DF7D7FA00D21BDC /* SettingsNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC221DF7D7FA00D21BDC /* SettingsNameViewController.swift */; };
 		931DAC251DF8853A00D21BDC /* SettingsPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */; };
-		931DAC281DF892E100D21BDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 931DAC271DF892E100D21BDC /* GoogleService-Info.plist */; };
 		9ECF8C5084C77E9378393D98 /* Pods_SplitIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */; };
 		B45B9CC5148C59778CB60133 /* Pods_SplitItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */; };
 		C75F8874A7983DDE8E5D9475 /* Pods_SplitItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1A3A76367C4EDBA2FE6111 /* Pods_SplitItTests.framework */; };
@@ -102,6 +102,7 @@
 		3DE1CE1C1DF751A900B95344 /* NewFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFriendsCell.swift; sourceTree = "<group>"; };
 		5E1A3A76367C4EDBA2FE6111 /* Pods_SplitItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64ED58153748831D7F8A2ADE /* Pods-SplitItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItUITests/Pods-SplitItUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7D05F3D01DF8BE7F0043E4F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9316DCC31DED384600ED01E7 /* SplitIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9316DCC61DED384600ED01E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9316DCC81DED384600ED01E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +150,6 @@
 		931DAC221DF7D7FA00D21BDC /* SettingsNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNameViewController.swift; sourceTree = "<group>"; };
 		931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPhoneViewController.swift; sourceTree = "<group>"; };
 		931DAC261DF88D3500D21BDC /* SplitIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SplitIt.entitlements; sourceTree = "<group>"; };
-		931DAC271DF892E100D21BDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SplitIt/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97888E0E6E88B3978B11B721 /* Pods-SplitItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItTests/Pods-SplitItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,7 +224,6 @@
 				35B05BFF5DC62DC547834A35 /* Frameworks */,
 				3DE1CE071DF740CA00B95344 /* SplitIt-Bridging-Header.h */,
 				931DAC261DF88D3500D21BDC /* SplitIt.entitlements */,
-				931DAC271DF892E100D21BDC /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +252,7 @@
 				9316DCCD1DED384600ED01E7 /* Assets.xcassets */,
 				9316DCCF1DED384600ED01E7 /* LaunchScreen.storyboard */,
 				9316DCD21DED384600ED01E7 /* Info.plist */,
+				7D05F3D01DF8BE7F0043E4F2 /* GoogleService-Info.plist */,
 			);
 			path = SplitIt;
 			sourceTree = "<group>";
@@ -452,8 +452,14 @@
 				TargetAttributes = {
 					9316DCC21DED384600ED01E7 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = GYSH3QV4KN;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					9316DCD61DED384600ED01E7 = {
 						CreatedOnToolsVersion = 8.1;
@@ -494,7 +500,7 @@
 			files = (
 				9316DCFD1DED3EA900ED01E7 /* SF-Compact-Display-Thin.otf in Resources */,
 				9316DD041DED5D9100ED01E7 /* Home.storyboard in Resources */,
-				931DAC281DF892E100D21BDC /* GoogleService-Info.plist in Resources */,
+				7D05F3D11DF8BE7F0043E4F2 /* GoogleService-Info.plist in Resources */,
 				9316DCFA1DED3EA900ED01E7 /* SF-Compact-Display-Light.otf in Resources */,
 				9316DD081DED5DBE00ED01E7 /* PayFlow.storyboard in Resources */,
 				9316DCD11DED384600ED01E7 /* LaunchScreen.storyboard in Resources */,
@@ -848,6 +854,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SplitIt.entitlements;
+				DEVELOPMENT_TEAM = GYSH3QV4KN;
 				INFOPLIST_FILE = SplitIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnbly.SplitIt;
@@ -864,6 +872,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SplitIt.entitlements;
+				DEVELOPMENT_TEAM = GYSH3QV4KN;
 				INFOPLIST_FILE = SplitIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnbly.SplitIt;
