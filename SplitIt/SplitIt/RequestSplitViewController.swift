@@ -50,7 +50,7 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func backArrow(_ sender: Any) {
-        navigationController!.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func didPressX(_ sender: Any)  {
