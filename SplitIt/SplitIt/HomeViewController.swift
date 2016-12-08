@@ -83,16 +83,25 @@ class HomeViewController: UIViewController {
     }
 
     
-    @IBAction func didTapHistoryButton(_ sender: Any) {
     
+    
+    @IBAction func didTapHistoryButton(_ sender: Any) {
+        
         let historytoryboard = UIStoryboard(name: "History", bundle: nil)
         let historycontroller = historytoryboard.instantiateViewController(withIdentifier:
             "HistoryFlowSB") as! HistoryViewController
         self.present(historycontroller, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func didTapSettingsButton(_ sender: Any) {
+        let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
+        let settingscontroller = settingsstoryboard.instantiateViewController(withIdentifier:
+            "SettingsSB") as! SettingsViewController
+           self.present(settingscontroller, animated: true, completion: nil)
         
-
-    
-    
+        
+        
     }
     
     

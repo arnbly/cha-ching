@@ -12,6 +12,7 @@ class HistoryFriendsCellViewTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var userProfilePicture: UIImageView!
+    
     @IBOutlet weak var userName: UILabel!
     
     @IBOutlet weak var amount: UILabel!
