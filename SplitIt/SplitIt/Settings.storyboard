@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sFX-ci-cuZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sFX-ci-cuZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,9 +56,9 @@
                                 <rect key="frame" x="125" y="43" width="124" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="userImage-Blank" translatesAutoresizingMaskIntoConstraints="NO" id="AX5-PH-KvF">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G01-9u-ciQ">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
@@ -111,20 +111,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOd-tO-vOl">
-                                <rect key="frame" x="283" y="276" width="76" height="21"/>
+                                <rect key="frame" x="136" y="276" width="223" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="16"/>
                                 <color key="textColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User@gmail.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHW-Gb-JI5">
-                                <rect key="frame" x="242" y="333" width="117" height="21"/>
+                                <rect key="frame" x="136" y="333" width="223" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="16"/>
                                 <color key="textColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="555.555.5555" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-gO-ZFO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-gO-ZFO">
                                 <rect key="frame" x="260" y="390" width="99" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="16"/>
@@ -155,6 +155,7 @@
                                     <color key="titleColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="didTapUserNameEditButton:" destination="sFX-ci-cuZ" eventType="touchUpInside" id="Ie0-dU-8ri"/>
                                     <segue destination="8fP-xC-AEe" kind="presentation" id="eJP-3V-6K9"/>
                                 </connections>
                             </button>
@@ -167,6 +168,7 @@
                                     <color key="titleColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="didTapUserEmailButton:" destination="sFX-ci-cuZ" eventType="touchUpInside" id="Abe-Cg-uBI"/>
                                     <segue destination="Ren-Jc-1W7" kind="presentation" id="v4a-FE-1ag"/>
                                 </connections>
                             </button>
@@ -191,21 +193,32 @@
                                     <color key="titleColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="didTapUserCurrencyEditButton:" destination="sFX-ci-cuZ" eventType="touchUpInside" id="dqB-9o-ggr"/>
                                     <segue destination="FaB-jq-Zj6" kind="presentation" id="lQZ-ZE-eoN"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="mainUserName" destination="iOd-tO-vOl" id="Bp6-KJ-hHc"/>
+                        <outlet property="signOutButton" destination="LXA-aw-ur4" id="qcD-zf-7VK"/>
+                        <outlet property="userCurrency" destination="n05-Xn-Nba" id="TQb-8d-pGC"/>
+                        <outlet property="userCurrencyButton" destination="v6V-HG-LBc" id="bUX-eU-pzk"/>
+                        <outlet property="userEmail" destination="yHW-Gb-JI5" id="Rvj-Wd-Ltn"/>
+                        <outlet property="userImage" destination="G01-9u-ciQ" id="kt0-ha-xrg"/>
+                        <outlet property="userName" destination="TUv-zU-itr" id="NeV-lo-CpJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ir-0b-MdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="80.799999999999997" y="220.83958020989508"/>
         </scene>
-        <!--Settings Edit View Controller-->
+        <!--Settings Name View Controller-->
         <scene sceneID="Y6B-CP-ueL">
             <objects>
-                <viewController id="8fP-xC-AEe" customClass="SettingsEditViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsNameController" id="8fP-xC-AEe" customClass="SettingsNameViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PWt-23-8jq"/>
                         <viewControllerLayoutGuide type="bottom" id="yz0-Vm-Og7"/>
@@ -244,19 +257,25 @@
                                 <rect key="frame" x="9" y="30" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="close-icon-gray"/>
+                                <connections>
+                                    <action selector="dismissSettingsNameViewControllerButton:" destination="8fP-xC-AEe" eventType="touchUpInside" id="SA8-xq-r6I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="userNameField" destination="WCs-oC-znV" id="Fji-Ev-7Oc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWF-wy-jYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-982" y="985"/>
         </scene>
-        <!--Settings Edit View Controller-->
+        <!--Settings Email View Controller-->
         <scene sceneID="XyE-Yp-1nS">
             <objects>
-                <viewController id="Ren-Jc-1W7" customClass="SettingsEditViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsEmailController" id="Ren-Jc-1W7" customClass="SettingsEmailViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eQf-ut-Mka"/>
                         <viewControllerLayoutGuide type="bottom" id="mXu-2I-Ivd"/>
@@ -295,10 +314,16 @@
                                 <rect key="frame" x="9" y="30" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="close-icon-gray"/>
+                                <connections>
+                                    <action selector="dismissSettingsEmailViewControllerButton:" destination="Ren-Jc-1W7" eventType="touchUpInside" id="a31-l6-66O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="userEmailField" destination="ngP-3K-PoT" id="wyo-Rj-Rze"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99I-BJ-2b0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,7 +332,7 @@
         <!--Settings Currency View Controller-->
         <scene sceneID="vUX-Tk-eCq">
             <objects>
-                <viewController id="FaB-jq-Zj6" customClass="SettingsCurrencyViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsCurrencyController" id="FaB-jq-Zj6" customClass="SettingsCurrencyViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tOy-Xh-YeL"/>
                         <viewControllerLayoutGuide type="bottom" id="C1e-Jh-iO8"/>
@@ -320,6 +345,9 @@
                                 <rect key="frame" x="9" y="30" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="close-icon-gray"/>
+                                <connections>
+                                    <action selector="dismissSettingsCurrencyViewControllerButton:" destination="FaB-jq-Zj6" eventType="touchUpInside" id="9eJ-bo-3au"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GCq-Yd-HXp" userLabel="InputRow-Large">
                                 <rect key="frame" x="22" y="145" width="330" height="292"/>
@@ -338,18 +366,27 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="dollars-disabled"/>
                                         <state key="selected" image="dollars-active"/>
+                                        <connections>
+                                            <action selector="didTapDollarButton:" destination="FaB-jq-Zj6" eventType="touchUpInside" id="bK3-eB-JIy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yme-ax-3EO">
                                         <rect key="frame" x="231" y="148" width="99" height="99"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="pounds-disabled"/>
                                         <state key="selected" image="pounds-active"/>
+                                        <connections>
+                                            <action selector="didTapPoundButton:" destination="FaB-jq-Zj6" eventType="touchUpInside" id="dTU-Zh-She"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnC-7H-opk">
                                         <rect key="frame" x="116" y="148" width="99" height="99"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="euro-disabled"/>
                                         <state key="selected" image="euro-active"/>
+                                        <connections>
+                                            <action selector="didTapEuroButton:" destination="FaB-jq-Zj6" eventType="touchUpInside" id="cl1-6F-HaN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </view>
@@ -359,19 +396,27 @@
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="26"/>
                                 <state key="normal" title="Save" backgroundImage="primary-button-shell"/>
+                                <connections>
+                                    <action selector="didTapSaveCurrencyButton:" destination="FaB-jq-Zj6" eventType="touchUpInside" id="J57-fj-6sM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dollarButton" destination="Olx-lK-3de" id="r8H-Xt-anW"/>
+                        <outlet property="euroButton" destination="jnC-7H-opk" id="ssw-Pv-wos"/>
+                        <outlet property="poundButton" destination="yme-ax-3EO" id="NME-DD-xkn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruY-Rh-pFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="985"/>
         </scene>
-        <!--Settings Edit View Controller-->
+        <!--Settings Phone View Controller-->
         <scene sceneID="HkF-1J-cIp">
             <objects>
-                <viewController id="m8G-7s-OnV" customClass="SettingsEditViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsPhoneController" id="m8G-7s-OnV" customClass="SettingsPhoneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HcW-Nn-WkX"/>
                         <viewControllerLayoutGuide type="bottom" id="jsf-9E-bMV"/>
@@ -410,6 +455,9 @@
                                 <rect key="frame" x="9" y="30" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="close-icon-gray"/>
+                                <connections>
+                                    <action selector="dismissSettingsPhoneViewControllerButton:" destination="m8G-7s-OnV" eventType="touchUpInside" id="QE2-IY-fn2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -432,6 +480,5 @@
         <image name="primary-button-shell" width="291" height="83"/>
         <image name="settings_menu_bkg" width="375" height="246"/>
         <image name="signout-bkg" width="375" height="70"/>
-        <image name="userImage-Blank" width="124" height="124"/>
     </resources>
 </document>

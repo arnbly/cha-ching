@@ -9,27 +9,97 @@
 import UIKit
 
 class SettingsCurrencyViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var dollarButton: UIButton!
+    
+    @IBOutlet weak var poundButton: UIButton!
+    
+    @IBOutlet weak var euroButton: UIButton!
+    
+    
+    var currency = String()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        if currency == "USD" {
+            dollarButton.isSelected = true
+            euroButton.isSelected = false
+            poundButton.isSelected = false
+            
+        }else if currency == "EUR" {
+            dollarButton.isSelected = false
+            euroButton.isSelected = true
+            poundButton.isSelected = false
+            
+        }else if currency == "UKP" {
+            dollarButton.isSelected = false
+            euroButton.isSelected = false
+            poundButton.isSelected = true
+            
+        }
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func dismissSettingsCurrencyViewControllerButton(_ sender: AnyObject) {
+        
+        dismiss(animated: true, completion: nil)
+        
     }
-    */
-
+    
+    
+    @IBAction func didTapPoundButton(_ sender: UIButton) {
+        
+        
+        dollarButton.isSelected = false
+        euroButton.isSelected = false
+        poundButton.isSelected = true
+        
+        currency = "UKP"
+        print(currency)
+        
+    }
+    
+    
+    @IBAction func didTapEuroButton(_ sender: UIButton) {
+        
+        dollarButton.isSelected = false
+        euroButton.isSelected = true
+        poundButton.isSelected = false
+        
+        currency = "EUR"
+        print(currency)
+    }
+    
+    
+    @IBAction func didTapDollarButton(_ sender: UIButton) {
+        
+        dollarButton.isSelected = true
+        euroButton.isSelected = false
+        poundButton.isSelected = false
+        currency = "USD"
+        print(currency)
+        
+    }
+    
+    
+    
+    @IBAction func didTapSaveCurrencyButton(_ sender: UIButton) {
+        
+        let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
+        let settingscontroller = settingsstoryboard.instantiateViewController(withIdentifier:
+            "SettingsSB") as! SettingsViewController
+        settingscontroller.curr = currency
+        print("settingsController.curr:", settingscontroller.curr)
+        
+        self.present(settingscontroller, animated: true, completion: nil)
+        
+        
+    }
+    
 }
