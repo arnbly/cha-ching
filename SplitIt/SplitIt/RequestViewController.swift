@@ -69,6 +69,11 @@ class RequestViewController: UIViewController, UITableViewDataSource {
         
         dismiss(animated: true, completion: nil)
         
+<<<<<<< HEAD
+=======
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "HomeInitialController") as UIViewController
+>>>>>>> master
         
     }
     

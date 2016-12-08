@@ -53,6 +53,13 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         filteredTableData.removeAll(keepingCapacity: false)
         
+        if #available(iOS 9.0, *) {
+            self.resultSearchController.loadViewIfNeeded()// iOS 9
+        } else {
+            // Fallback on earlier versions
+            let _ = self.resultSearchController.view          // iOS 8
+        }
+        
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
         let array = (recents as NSArray).filtered(using: searchPredicate)
         filteredTableData = array as! [String]
@@ -73,7 +80,7 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         
         // [2] Create an instance of the storyboard's initial view controller.
-        let controller = storyboard.instantiateViewController(withIdentifier: "HomeSB") as UIViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "HomeInitialController") as UIViewController
         
         // [3] Display the new view controller.
         present(controller, animated: true, completion: nil)
