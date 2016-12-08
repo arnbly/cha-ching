@@ -184,8 +184,7 @@
                                     <color key="titleColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapUserCurrencyButton:" destination="sFX-ci-cuZ" eventType="touchUpInside" id="etH-Ga-Cmx"/>
-                                    <segue destination="m8G-7s-OnV" kind="modal" id="kIb-fV-tVG"/>
+                                    <segue destination="m8G-7s-OnV" kind="modal" id="iw0-mu-Eeg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6V-HG-LBc" userLabel="currencyButton">
@@ -460,7 +459,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="close-icon-gray"/>
                                 <connections>
-                                    <action selector="dismissSettingsPhoneViewControllerButton:" destination="m8G-7s-OnV" eventType="touchUpInside" id="96B-29-Ew2"/>
+                                    <action selector="didTapDismissButton:" destination="m8G-7s-OnV" eventType="touchUpInside" id="AUK-iL-lM1"/>
                                 </connections>
                             </button>
                         </subviews>

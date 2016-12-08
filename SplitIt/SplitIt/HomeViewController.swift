@@ -83,5 +83,18 @@ class HomeViewController: UIViewController {
     }
 
     
+    @IBAction func didTapHistoryButton(_ sender: Any) {
+    
+        let historytoryboard = UIStoryboard(name: "History", bundle: nil)
+        let historycontroller = historytoryboard.instantiateViewController(withIdentifier:
+            "HistoryFlowSB") as! HistoryViewController
+        self.present(historycontroller, animated: true, completion: nil)
+        
+
+    
+    
+    }
+    
+    
 
 }
