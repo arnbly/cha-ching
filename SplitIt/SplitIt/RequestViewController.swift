@@ -25,7 +25,7 @@ class RequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextButton.alpha = 0
+        //nextButton.alpha = 0
     }
     
     
@@ -38,7 +38,7 @@ class RequestViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         
         // [2] Create an instance of the storyboard's initial view controller.
-        let controller = storyboard.instantiateViewController(withIdentifier: "HomeSB") as UIViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "HomeInitialController") as UIViewController
         
         // [3] Display the new view controller.
         present(controller, animated: true, completion: nil)
