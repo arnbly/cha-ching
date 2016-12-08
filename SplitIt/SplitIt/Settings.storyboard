@@ -40,6 +40,9 @@
                                         <rect key="frame" x="325" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-arrow-right-white"/>
+                                        <connections>
+                                            <action selector="didTapBackButton:" destination="sFX-ci-cuZ" eventType="touchUpInside" id="YU4-Om-FdS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfy-Ng-xb2">
                                         <rect key="frame" x="10" y="30" width="62" height="40"/>
