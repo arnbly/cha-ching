@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
-import Firebase
+import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
@@ -26,13 +26,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var mainUserName: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var userCurrency: UILabel!
+    @IBOutlet weak var userName: UILabel!
     
     
-    /*
-     var name = String()
-     var email = String()
-     var profilePicture = UIImage()
-     */
     var curr = String()
     var edittedCurr = String()
     
@@ -50,6 +46,7 @@ class SettingsViewController: UIViewController {
         userCurrency.text = "USD"
         edittedCurr = userCurrency.text!
         if curr != "" {
+            print("Settings curr:", curr )
             userCurrency.text = curr
             edittedCurr = userCurrency.text!
         }
@@ -75,27 +72,85 @@ class SettingsViewController: UIViewController {
     
     func ifUserIsLoggedIn() {
         
-        
-        let user = FIRAuth.auth()?.currentUser
-        // The user's ID, unique to the Firebase project.
-        // Do NOT use this value to authenticate with your backend server,
-        // if you have one. Use getTokenWithCompletion:completion: instead.
-        
-        let email = user?.email
-        //let uid = user?.uid
-        let photoURL = user?.photoURL
-        let name = user?.displayName
-        
-        mainUserName.text = name
-        userEmail.text = email
-        
-        let data = NSData(contentsOf: photoURL!)
-        userImage.image = UIImage(data: data as! Data)
-        
-        print("Settings page displays the name as:", mainUserName.text)
-        print("Settings page displays the email as:", userEmail.text)
-        
-        
+        if FIRAuth.auth()?.currentUser != nil {
+            // User is signed in.
+            
+            let user = FIRAuth.auth()?.currentUser
+            // The user's ID, unique to the Firebase project.
+            // Do NOT use this value to authenticate with your backend server,
+            // if you have one. Use getTokenWithCompletion:completion: instead.
+            let email = user?.email
+            let name = user?.displayName
+            let photoURL = user?.photoURL
+            
+            let data = NSData(contentsOf: photoURL!)
+            userImage.image = UIImage(data: data as! Data)
+            
+            mainUserName.text = name
+            userName.text = name
+            userEmail.text = email
+            
+            print(mainUserName.text)
+            print ("SUCCESS ON SETTINGS WITH USER DATA")
+            
+            // Get a reference to the storage service, using the default Firebase App
+            let storage = FIRStorage.storage()
+            
+            // Create a storage reference from our storage service
+            let storageRef = storage.reference(forURL: "gs://splitit-bb5bc.appspot.com")
+            
+            
+            let profilePic = FBSDKGraphRequest(graphPath: "me/picture", parameters: ["height":300, "width": 300, "redirect": false], httpMethod: "GET")
+            
+            let connection = FBSDKGraphRequestConnection()
+            
+            connection.add(profilePic, completionHandler: { (connection, result, error) in
+                
+                if error != nil {
+                    
+                    print("Error on Setting Page with FBSDKGraph Request:", error)
+                    
+                } else {
+                    
+                    print("Settings Page FBSDKGraph Request Result:", result)
+                    
+                    
+                    let dictionary = result as! NSDictionary
+                    let data = dictionary.object(forKey: "data") as AnyObject?
+                    
+                    let urlPic = (data?.object(forKey: "url")) as! String
+                    
+                    if let imageData = NSData(contentsOf: NSURL(string: urlPic) as! URL){
+                      
+                        let profilePicRef = storageRef.child((user?.uid)!+"/profile_pic.jpg")
+                        
+                        let uploadTask = profilePicRef.put(imageData as! Data, metadata: nil){
+                           metadata,error in
+                            
+                            if error == nil {
+                                let downloadURL = metadata?.downloadURL()
+                                
+                            }else {
+                                print("Download Image Error")
+                                
+                            }
+                        }
+                        self.userImage.image = UIImage(data: imageData as Data)
+                    }
+                    
+                    
+                }
+                
+            })
+            
+            connection.start()
+            
+            
+            
+        } else {
+            // No user is signed in.
+            
+        }
     }
     
     
@@ -103,7 +158,7 @@ class SettingsViewController: UIViewController {
     func handlesignOutButton() {
         
         //Sign out of Firebase
-        try! FIRAuth.auth()!.signOut()
+        // try! FIRAuth.auth()!.signOut()
         
         //Sign out of Facebook
         FBSDKAccessToken.setCurrent(nil)
