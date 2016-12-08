@@ -45,6 +45,18 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         })
     }
     
+    // ####### DELETE ME ########
+    @IBAction func goHome(_ sender: Any) {
+        // [1] Create a new "Home" instance.
+        let homestoryboard = UIStoryboard(name: "Home", bundle: nil)
+        
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = homestoryboard.instantiateViewController(withIdentifier: "HomeInitialController") as UIViewController
+        
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
+        
+    }
     func handleCustomFBLogin() {
         
         FBSDKLoginManager().logIn(withReadPermissions: ["email","public_profile"], from: self) {

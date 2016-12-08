@@ -61,6 +61,7 @@
 		931DAC211DF7D7DC00D21BDC /* SettingsEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC201DF7D7DC00D21BDC /* SettingsEmailViewController.swift */; };
 		931DAC231DF7D7FA00D21BDC /* SettingsNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC221DF7D7FA00D21BDC /* SettingsNameViewController.swift */; };
 		931DAC251DF8853A00D21BDC /* SettingsPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */; };
+		931DAC2C1DF9154700D21BDC /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC2B1DF9154700D21BDC /* UserDataViewController.swift */; };
 		9ECF8C5084C77E9378393D98 /* Pods_SplitIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */; };
 		B45B9CC5148C59778CB60133 /* Pods_SplitItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */; };
 		C75F8874A7983DDE8E5D9475 /* Pods_SplitItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1A3A76367C4EDBA2FE6111 /* Pods_SplitItTests.framework */; };
@@ -150,6 +151,7 @@
 		931DAC221DF7D7FA00D21BDC /* SettingsNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNameViewController.swift; sourceTree = "<group>"; };
 		931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPhoneViewController.swift; sourceTree = "<group>"; };
 		931DAC261DF88D3500D21BDC /* SplitIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SplitIt.entitlements; sourceTree = "<group>"; };
+		931DAC2B1DF9154700D21BDC /* UserDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDataViewController.swift; path = SplitIt/UserDataViewController.swift; sourceTree = "<group>"; };
 		97888E0E6E88B3978B11B721 /* Pods-SplitItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItTests/Pods-SplitItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +225,7 @@
 				FDF8A165B8B65050508E0659 /* Pods */,
 				35B05BFF5DC62DC547834A35 /* Frameworks */,
 				3DE1CE071DF740CA00B95344 /* SplitIt-Bridging-Header.h */,
+				931DAC2B1DF9154700D21BDC /* UserDataViewController.swift */,
 				931DAC261DF88D3500D21BDC /* SplitIt.entitlements */,
 			);
 			sourceTree = "<group>";
@@ -452,7 +455,6 @@
 				TargetAttributes = {
 					9316DCC21DED384600ED01E7 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GYSH3QV4KN;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -688,6 +690,7 @@
 				931DAC251DF8853A00D21BDC /* SettingsPhoneViewController.swift in Sources */,
 				9316DD241DED5FFB00ED01E7 /* PersonDetailViewController.swift in Sources */,
 				9316DCC71DED384600ED01E7 /* AppDelegate.swift in Sources */,
+				931DAC2C1DF9154700D21BDC /* UserDataViewController.swift in Sources */,
 				3D4DCF671DF3931A00CDF846 /* FriendsCell.swift in Sources */,
 				9316DD181DED5F2700ED01E7 /* RequestViewController.swift in Sources */,
 				9316DD301DED612800ED01E7 /* RequestSuccessViewController.swift in Sources */,
@@ -855,7 +858,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SplitIt.entitlements;
-				DEVELOPMENT_TEAM = GYSH3QV4KN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SplitIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnbly.SplitIt;
@@ -873,7 +876,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SplitIt.entitlements;
-				DEVELOPMENT_TEAM = GYSH3QV4KN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SplitIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnbly.SplitIt;
