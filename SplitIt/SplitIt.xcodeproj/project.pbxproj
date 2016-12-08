@@ -21,6 +21,8 @@
 		3DE1CE1B1DF741B500B95344 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE1CE121DF741B500B95344 /* SystemConfiguration.framework */; };
 		3DE1CE1D1DF751A900B95344 /* NewFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1CE1C1DF751A900B95344 /* NewFriendsCell.swift */; };
 		7D05F3D11DF8BE7F0043E4F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D05F3D01DF8BE7F0043E4F2 /* GoogleService-Info.plist */; };
+		7DD1AB891DF9A82900557B74 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD1AB871DF9A82900557B74 /* BaseTransition.swift */; };
+		7DD1AB8A1DF9A82900557B74 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD1AB881DF9A82900557B74 /* FadeTransition.swift */; };
 		9316DCC71DED384600ED01E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DCC61DED384600ED01E7 /* AppDelegate.swift */; };
 		9316DCC91DED384600ED01E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DCC81DED384600ED01E7 /* ViewController.swift */; };
 		9316DCCC1DED384600ED01E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9316DCCA1DED384600ED01E7 /* Main.storyboard */; };
@@ -107,6 +109,8 @@
 		5E1A3A76367C4EDBA2FE6111 /* Pods_SplitItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64ED58153748831D7F8A2ADE /* Pods-SplitItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItUITests/Pods-SplitItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D05F3D01DF8BE7F0043E4F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7DD1AB871DF9A82900557B74 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		7DD1AB881DF9A82900557B74 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		9316DCC31DED384600ED01E7 /* SplitIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9316DCC61DED384600ED01E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9316DCC81DED384600ED01E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 				9316DD121DED5ED100ED01E7 /* Pay Money */,
 				9316DD131DED5ED800ED01E7 /* History */,
 				9316DD141DED5EDD00ED01E7 /* Settings */,
+				7DD1AB871DF9A82900557B74 /* BaseTransition.swift */,
+				7DD1AB881DF9A82900557B74 /* FadeTransition.swift */,
 				9316DCC61DED384600ED01E7 /* AppDelegate.swift */,
 				9316DCC81DED384600ED01E7 /* ViewController.swift */,
 				9316DCFE1DED3EB800ED01E7 /* Fonts */,
@@ -689,8 +695,10 @@
 				931DAC321DF949C600D21BDC /* LentTableViewCell.swift in Sources */,
 				931DAC2E1DF9384100D21BDC /* OwedTableViewCell.swift in Sources */,
 				9316DD321DED615900ED01E7 /* PayToViewController.swift in Sources */,
+				7DD1AB891DF9A82900557B74 /* BaseTransition.swift in Sources */,
 				9316DD201DED5FA900ED01E7 /* WelcomeViewController.swift in Sources */,
 				3DE1CE1D1DF751A900B95344 /* NewFriendsCell.swift in Sources */,
+				7DD1AB8A1DF9A82900557B74 /* FadeTransition.swift in Sources */,
 				9316DCC91DED384600ED01E7 /* ViewController.swift in Sources */,
 				9316DD361DED618900ED01E7 /* PaySuccessViewController.swift in Sources */,
 				9316DD341DED617300ED01E7 /* PayReviewViewController.swift in Sources */,
