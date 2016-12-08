@@ -114,20 +114,26 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         
         if (self.resultSearchController.isActive) {
             cell.label.text = filteredTableData[indexPath.row]
+            cell.selectDefault.isHidden = false
+            cell.selectActive.isHidden = true
             return cell
         }
         else {
             cell.label.text = recents[indexPath.row]
+            cell.selectDefault.isHidden = false
+            cell.selectActive.isHidden = true
+
             return cell
         }
         
     }
 
-
-func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.row)!")
-        self.performSegue(withIdentifier: "scanPageSegue", sender: self)
-}
+        
+        var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath as IndexPath)!
+        selectedCell.contentView.backgroundColor = UIColor(red:0.50, green:0.57, blue:1.00, alpha:1.0)
+    }
     
     
     @IBAction func didTap(_ sender: Any) {

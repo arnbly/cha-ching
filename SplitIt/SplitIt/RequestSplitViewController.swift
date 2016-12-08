@@ -69,7 +69,7 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let totalPay = Int(lentTotal.text!) ?? 0
-        let payments = totalPay/(names.count + 1)
+        let payments = totalPay/(names.count)
         let userPayment = String(describing: payments)
         var cell:UITableViewCell?
         let name = names[indexPath.row]
@@ -104,12 +104,11 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         //destinationViewController.text = digits.
         
     }
+    
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 
-    
-    
-    /*func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("hi")
-    }*/
 
     
 
