@@ -127,11 +127,11 @@
                                 <color key="textColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-gO-ZFO">
-                                <rect key="frame" x="260" y="390" width="99" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="555.555.5555" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezc-gO-ZFO">
+                                <rect key="frame" x="184" y="390" width="175" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="16"/>
-                                <color key="textColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n05-Xn-Nba">
@@ -184,7 +184,8 @@
                                     <color key="titleColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="m8G-7s-OnV" kind="presentation" id="EJA-e5-UBw"/>
+                                    <action selector="didTapUserCurrencyButton:" destination="sFX-ci-cuZ" eventType="touchUpInside" id="etH-Ga-Cmx"/>
+                                    <segue destination="m8G-7s-OnV" kind="modal" id="kIb-fV-tVG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6V-HG-LBc" userLabel="currencyButton">
@@ -196,7 +197,7 @@
                                     <color key="titleColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapUserCurrencyEditButton:" destination="sFX-ci-cuZ" eventType="touchUpInside" id="dqB-9o-ggr"/>
+                                    <action selector="didTapUserCurrencyEditButton:" destination="sFX-ci-cuZ" eventType="touchUpInside" id="ATt-Jr-ErM"/>
                                     <segue destination="FaB-jq-Zj6" kind="presentation" id="lQZ-ZE-eoN"/>
                                 </connections>
                             </button>
@@ -459,7 +460,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="close-icon-gray"/>
                                 <connections>
-                                    <action selector="dismissSettingsPhoneViewControllerButton:" destination="m8G-7s-OnV" eventType="touchUpInside" id="QE2-IY-fn2"/>
+                                    <action selector="dismissSettingsPhoneViewControllerButton:" destination="m8G-7s-OnV" eventType="touchUpInside" id="96B-29-Ew2"/>
                                 </connections>
                             </button>
                         </subviews>
