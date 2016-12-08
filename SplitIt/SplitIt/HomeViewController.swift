@@ -9,11 +9,39 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var userData: UserDataViewController = UserDataViewController()
 
+    @IBOutlet weak var lentLabel: UILabel!
+    @IBOutlet weak var owedLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let userNames = userData.userNames
+        let userProfile = userData.userProfile
+        let transAmounts = userData.transAmounts
+        let transDescriptions = userData.transDescriptions
+        
+        var lentAmount = Double()
+        var owedAmount = Double()
+        
+        for transAmount in transAmounts {
+            if transAmount <= 0 {
+                let signFlip = transAmount * -1
+                owedAmount += signFlip
+                print(owedAmount)
+            } else {
+                lentAmount += transAmount
+                print(lentAmount)
+            }
+        }
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
+        lentLabel.text = formatter.string(from: lentAmount as NSNumber)
+        owedLabel.text = formatter.string(from: owedAmount as NSNumber)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +71,15 @@ class HomeViewController: UIViewController {
         
         // [3] Display the new view controller.
         present(controller, animated: true, completion: nil)
+    }
+    
+    func currencyStringFromNumber(number: NSNumber) -> String {
+        let formatter = NumberFormatter()
+        let locale = Locale.current
+
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = locale.currencySymbol
+        return formatter.string(from: number)!
     }
 
     

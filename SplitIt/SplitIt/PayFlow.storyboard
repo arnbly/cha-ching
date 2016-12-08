@@ -210,7 +210,13 @@
                                 <rect key="frame" x="0.0" y="549" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+<<<<<<< HEAD
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="button-background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-44-qb9">
+=======
+
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="button-background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-44-qb9">
+
+>>>>>>> master
                                         <rect key="frame" x="1" y="-1" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
