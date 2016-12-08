@@ -62,6 +62,9 @@
 		931DAC231DF7D7FA00D21BDC /* SettingsNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC221DF7D7FA00D21BDC /* SettingsNameViewController.swift */; };
 		931DAC251DF8853A00D21BDC /* SettingsPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */; };
 		931DAC2C1DF9154700D21BDC /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC2B1DF9154700D21BDC /* UserDataViewController.swift */; };
+		931DAC2E1DF9384100D21BDC /* OwedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC2D1DF9384100D21BDC /* OwedTableViewCell.swift */; };
+		931DAC321DF949C600D21BDC /* LentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC311DF949C600D21BDC /* LentTableViewCell.swift */; };
+		931DAC341DF95A1500D21BDC /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC331DF95A1500D21BDC /* DetailTableViewCell.swift */; };
 		9ECF8C5084C77E9378393D98 /* Pods_SplitIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */; };
 		B45B9CC5148C59778CB60133 /* Pods_SplitItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */; };
 		C75F8874A7983DDE8E5D9475 /* Pods_SplitItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1A3A76367C4EDBA2FE6111 /* Pods_SplitItTests.framework */; };
@@ -152,6 +155,9 @@
 		931DAC241DF8853A00D21BDC /* SettingsPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPhoneViewController.swift; sourceTree = "<group>"; };
 		931DAC261DF88D3500D21BDC /* SplitIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SplitIt.entitlements; sourceTree = "<group>"; };
 		931DAC2B1DF9154700D21BDC /* UserDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDataViewController.swift; path = SplitIt/UserDataViewController.swift; sourceTree = "<group>"; };
+		931DAC2D1DF9384100D21BDC /* OwedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwedTableViewCell.swift; sourceTree = "<group>"; };
+		931DAC311DF949C600D21BDC /* LentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LentTableViewCell.swift; sourceTree = "<group>"; };
+		931DAC331DF95A1500D21BDC /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailTableViewCell.swift; path = ../DetailTableViewCell.swift; sourceTree = "<group>"; };
 		97888E0E6E88B3978B11B721 /* Pods-SplitItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItTests/Pods-SplitItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,11 +311,14 @@
 			isa = PBXGroup;
 			children = (
 				9316DD031DED5D9100ED01E7 /* Home.storyboard */,
+				931DAC2D1DF9384100D21BDC /* OwedTableViewCell.swift */,
 				9316DD211DED5FD400ED01E7 /* OweViewController.swift */,
 				9316DD231DED5FFB00ED01E7 /* PersonDetailViewController.swift */,
 				9316DD251DED603300ED01E7 /* RequestedViewController.swift */,
 				9316DD271DED605100ED01E7 /* TransactionDetailViewController.swift */,
 				9316DD151DED5F1600ED01E7 /* HomeViewController.swift */,
+				931DAC331DF95A1500D21BDC /* DetailTableViewCell.swift */,
+				931DAC311DF949C600D21BDC /* LentTableViewCell.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -677,6 +686,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931DAC321DF949C600D21BDC /* LentTableViewCell.swift in Sources */,
+				931DAC2E1DF9384100D21BDC /* OwedTableViewCell.swift in Sources */,
 				9316DD321DED615900ED01E7 /* PayToViewController.swift in Sources */,
 				9316DD201DED5FA900ED01E7 /* WelcomeViewController.swift in Sources */,
 				3DE1CE1D1DF751A900B95344 /* NewFriendsCell.swift in Sources */,
@@ -685,6 +696,7 @@
 				9316DD341DED617300ED01E7 /* PayReviewViewController.swift in Sources */,
 				9316DD2E1DED611100ED01E7 /* RequestReviewViewController.swift in Sources */,
 				9316DD3A1DED620000ED01E7 /* SettingsCurrencyViewController.swift in Sources */,
+				931DAC341DF95A1500D21BDC /* DetailTableViewCell.swift in Sources */,
 				931DAC211DF7D7DC00D21BDC /* SettingsEmailViewController.swift in Sources */,
 				9316DD1A1DED5F3A00ED01E7 /* PayViewController.swift in Sources */,
 				931DAC251DF8853A00D21BDC /* SettingsPhoneViewController.swift in Sources */,
