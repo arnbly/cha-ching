@@ -21,6 +21,7 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
     var resultSearchController = UISearchController()
     var checked = [Bool]()
     var selected = String()
+    var userData: UserDataViewController = UserDataViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,9 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.allowsSelection = true
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
+        
+        let userNames = userData.userNames
+        let userProfile = userData.userProfile
         
         if #available(iOS 9.0, *) {
             self.resultSearchController.loadViewIfNeeded()// iOS 9
@@ -110,7 +114,8 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! FriendsCell
-        let recent = recents[indexPath.row]
+        
+        //let recent = userNames[indexPath.row]
         
         if (self.resultSearchController.isActive) {
             cell.label.text = filteredTableData[indexPath.row]
@@ -119,7 +124,8 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
             return cell
         }
         else {
-            cell.label.text = recents[indexPath.row]
+            cell.label.text = userData.userNames[indexPath.row]
+            cell.userImage.image = userData.userProfile[indexPath.row]
             cell.selectDefault.isHidden = false
             cell.selectActive.isHidden = true
 

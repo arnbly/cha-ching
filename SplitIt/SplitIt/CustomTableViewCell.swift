@@ -10,9 +10,10 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPayment: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

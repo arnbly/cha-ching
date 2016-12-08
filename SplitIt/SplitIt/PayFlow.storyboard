@@ -210,9 +210,7 @@
                                 <rect key="frame" x="0.0" y="549" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="button-background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-44-qb9">
-                                    
                                         <rect key="frame" x="1" y="-1" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
@@ -251,16 +249,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSj-bE-oXW">
-                                                    <rect key="frame" x="104" y="27" width="124" height="21"/>
+                                                    <rect key="frame" x="95" y="27" width="124" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="userImage-Blank" translatesAutoresizingMaskIntoConstraints="NO" id="bro-tk-unu">
-                                                    <rect key="frame" x="20" y="5" width="65" height="65"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="select-button-active" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-09-F6k">
                                                     <rect key="frame" x="310" y="19" width="37" height="37"/>
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -269,12 +263,16 @@
                                                     <rect key="frame" x="310" y="19" width="36" height="36"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzP-zu-uhu">
+                                                    <rect key="frame" x="20" y="12" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="isActuallyChecked" destination="ftd-09-F6k" id="XOI-gt-dQt"/>
                                             <outlet property="isChecked" destination="E6t-VF-mxc" id="YCc-m6-c4P"/>
-                                            <outlet property="userImage" destination="bro-tk-unu" id="K1S-nH-rPr"/>
+                                            <outlet property="userImage" destination="tzP-zu-uhu" id="2dp-FD-AJV"/>
                                             <outlet property="userName" destination="cSj-bE-oXW" id="oFe-nW-hi3"/>
                                         </connections>
                                     </tableViewCell>
@@ -417,7 +415,7 @@
                                         <color key="textColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amrutha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkV-3l-qA4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clare" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkV-3l-qA4">
                                         <rect key="frame" x="19" y="42" width="336" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Light" family="SF Compact Display" pointSize="43"/>
@@ -470,6 +468,5 @@
         <image name="secondary-button-shell" width="273" height="65"/>
         <image name="select-button-active" width="37" height="37"/>
         <image name="select-button-disabled" width="36" height="36"/>
-        <image name="userImage-Blank" width="124" height="124"/>
     </resources>
 </document>

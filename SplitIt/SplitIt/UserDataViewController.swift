@@ -27,6 +27,19 @@ class UserDataViewController: UIViewController {
         "Derek Steer",
         "Lucas Smith"]
     
+    //Split With Users - 3ct
+    let splitNames = [
+        "Me",
+        "Matt Burghoffer",
+        "Heather Phillips"]
+    
+    //Split With User Profiles 
+    var splitProfile: [UIImage] = [
+        UIImage(named: "m6.png")!,
+        UIImage(named: "m2.png")!,
+        UIImage(named: "f8.png")!
+    ]
+    
     //User Profile Photos
     var userProfile: [UIImage] = [
         UIImage(named: "f1.png")!,
