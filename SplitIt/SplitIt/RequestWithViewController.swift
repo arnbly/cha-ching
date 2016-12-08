@@ -72,7 +72,7 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         filteredTableData.removeAll(keepingCapacity: false)
         
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
-        let array = (recents as NSArray).filtered(using: searchPredicate)
+        let array = (userData.userNames as NSArray).filtered(using: searchPredicate)
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
@@ -97,7 +97,7 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         present(controller, animated: true, completion: nil)
     }
     @IBAction func backArrow(_ sender: Any) {
-        navigationController!.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     

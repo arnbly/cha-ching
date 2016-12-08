@@ -108,6 +108,11 @@ class PayReviewViewController: UIViewController, PayPalPaymentDelegate {
     
     }
     
+   
+    @IBAction func didPressBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     
     
@@ -123,11 +128,6 @@ class PayReviewViewController: UIViewController, PayPalPaymentDelegate {
         
     }
     
-    
-    
-    @IBAction func didPressBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
     
 
 }

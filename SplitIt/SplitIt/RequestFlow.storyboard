@@ -54,9 +54,6 @@
                                         <color key="textColor" red="0.5568627451" green="0.62745098040000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="lentField:" destination="kPT-gh-z4S" eventType="editingDidEnd" id="QOp-7o-RkN"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </view>
@@ -101,7 +98,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-left-icon"/>
                                         <connections>
-                                            <action selector="firstBackArrow:" destination="kPT-gh-z4S" eventType="touchUpInside" id="nuZ-yK-eNh"/>
+                                            <action selector="didPressBack:" destination="kPT-gh-z4S" eventType="touchUpInside" id="a88-fk-QTx"/>
+                                            <action selector="didTapBack:" destination="kPT-gh-z4S" eventType="touchUpInside" id="YF5-b3-Pqu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ork-yg-EK2">
@@ -109,7 +107,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="close-icon-gray"/>
                                         <connections>
-                                            <action selector="didPressX:" destination="kPT-gh-z4S" eventType="touchUpInside" id="Qh1-Zo-8NU"/>
+                                            <action selector="didPressX:" destination="kPT-gh-z4S" eventType="touchUpInside" id="hSA-j3-xS9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -124,7 +122,7 @@
                                     <color key="titleColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MTQ-gZ-NUy" kind="show" id="dhy-iW-Bxq"/>
+                                    <segue destination="MTQ-gZ-NUy" kind="modal" id="dhy-iW-Bxq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,17 +134,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="iak-z0-mxB"/>
                     <connections>
-                        <outlet property="forField" destination="ILx-le-uhS" id="aCq-Wl-apT"/>
-                        <outlet property="lentField" destination="9ye-f3-m2M" id="d96-aV-FTp"/>
-                        <outlet property="nextButton" destination="wf6-7n-EeO" id="rcI-uy-pbW"/>
+                        <outlet property="forField" destination="ILx-le-uhS" id="VNk-tH-uWm"/>
+                        <outlet property="lentField" destination="9ye-f3-m2M" id="2CR-Nj-dec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Vg-aH-xUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zt5-Wq-mrV">
-                    <connections>
-                        <action selector="didTap:" destination="kPT-gh-z4S" id="5nk-op-SoC"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zt5-Wq-mrV"/>
             </objects>
             <point key="canvasLocation" x="5.5999999999999996" y="71.514242878560722"/>
         </scene>
@@ -197,7 +190,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdD-IG-41p">
-                                        <rect key="frame" x="36" y="24" width="294" height="29"/>
+                                        <rect key="frame" x="34" y="24" width="294" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="24"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -210,8 +203,8 @@
                                         <color key="textColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJS-Ts-H65">
-                                        <rect key="frame" x="19" y="24" width="20" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTT-bt-YpS">
+                                        <rect key="frame" x="19" y="24" width="17" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="24"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -237,7 +230,7 @@
                                             <color key="titleColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="73N-ku-hbX" kind="show" identifier="scanPageSegue" id="ZzY-Xa-lwj"/>
+                                            <segue destination="73N-ku-hbX" kind="presentation" identifier="scanPageSegue" id="ZzY-Xa-lwj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -376,7 +369,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFv-hb-FqX">
-                                        <rect key="frame" x="36" y="24" width="276" height="23"/>
+                                        <rect key="frame" x="40" y="24" width="276" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="24"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -389,8 +382,8 @@
                                         <color key="textColor" red="0.08235294118" green="0.13725490200000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m6-jk-W6R">
-                                        <rect key="frame" x="19" y="24" width="20" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKN-eE-ZPC">
+                                        <rect key="frame" x="24" y="21" width="17" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="24"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -456,7 +449,7 @@
                                             <color key="titleColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="OoP-Wi-IUe" kind="show" id="Fdc-CK-iej"/>
+                                            <segue destination="OoP-Wi-IUe" kind="presentation" id="Fdc-CK-iej"/>
                                         </connections>
                                     </button>
                                 </subviews>
