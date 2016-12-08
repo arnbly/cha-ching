@@ -29,7 +29,8 @@
         <!--Navigation Controller-->
         <scene sceneID="CuP-aR-jOl">
             <objects>
-                <navigationController id="Wwz-5B-t4M" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="Wwz-5B-t4M" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="s84-ri-Rl9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,7 +119,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOP-fV-48c">
-                                        <rect key="frame" x="-5" y="26" width="258" height="53"/>
+                                        <rect key="frame" x="-5" y="26" width="312" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Thin" family="SF Compact Display" pointSize="70"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -146,7 +147,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTI-iF-8hV">
-                                        <rect key="frame" x="-5" y="26" width="258" height="53"/>
+                                        <rect key="frame" x="-5" y="26" width="302" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Thin" family="SF Compact Display" pointSize="70"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,16 +167,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ORc-88-jdw"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="lentLabel" destination="hOP-fV-48c" id="bnE-pV-eny"/>
+                        <outlet property="owedLabel" destination="HTI-iF-8hV" id="Cx1-95-6eN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5x-QV-PlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="AoE-wA-8YW" userLabel="tapLentGestureRec">
                     <connections>
-                        <segue destination="xgL-W4-GBs" kind="show" id="BFz-n3-5Mf"/>
+                        <segue destination="EUd-DX-exX" kind="push" id="akI-qq-cbf"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="oDY-qh-Dua" userLabel="tapOweGestureRec">
                     <connections>
-                        <segue destination="EUd-DX-exX" kind="show" id="C3S-Vx-nah"/>
+                        <segue destination="xgL-W4-GBs" kind="push" id="D8Z-lS-meo"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -217,14 +223,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHL-Xo-1lg">
-                                        <rect key="frame" x="58" y="59" width="258" height="22"/>
+                                        <rect key="frame" x="58" y="61" width="258" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMz-lS-0DF">
-                                        <rect key="frame" x="59" y="8" width="258" height="47"/>
+                                        <rect key="frame" x="59" y="6" width="258" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Thin" family="SF Compact Display" pointSize="51"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,6 +308,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Gck-nh-s1A"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <segue destination="dZ5-cO-XFl" kind="show" identifier="editTransactionDetailView" id="v86-eJ-tTk"/>
                     </connections>
@@ -455,6 +463,9 @@
                                         <rect key="frame" x="11" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-arrow-left-white"/>
+                                        <connections>
+                                            <action selector="didTapBack:" destination="xgL-W4-GBs" eventType="touchUpInside" id="s28-ZU-1gb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYn-je-47v">
                                         <rect key="frame" x="295" y="30" width="62" height="40"/>
@@ -472,14 +483,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG1-pQ-sZr">
-                                        <rect key="frame" x="58" y="59" width="258" height="22"/>
+                                        <rect key="frame" x="58" y="61" width="258" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmR-5z-BxJ">
-                                        <rect key="frame" x="59" y="8" width="258" height="47"/>
+                                        <rect key="frame" x="59" y="6" width="258" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Thin" family="SF Compact Display" pointSize="51"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -543,9 +554,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4JE-im-aT9"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="countLabel" destination="fG1-pQ-sZr" id="m6L-5q-c0x"/>
+                        <outlet property="owedLabel" destination="JmR-5z-BxJ" id="4cH-mB-JMe"/>
                         <segue destination="zPo-p6-Zy8" kind="show" identifier="oweDetailViewSegue" id="lEB-uD-cq6"/>
                     </connections>
                 </viewController>

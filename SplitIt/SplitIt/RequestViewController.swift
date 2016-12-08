@@ -25,7 +25,7 @@ class RequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextButton.alpha = 0
+        //nextButton.alpha = 0
     }
     
     
