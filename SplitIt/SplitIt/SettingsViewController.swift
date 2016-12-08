@@ -234,17 +234,13 @@ class SettingsViewController: UIViewController {
     
     
     
-    @IBAction func didTapUserCurrencyButton(_ sender: UIButton) {
+    
+   /* @IBAction func didTapPhoneButton(_ sender: Any) {
         
-        let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
-        let settingsphonecontroller = settingsstoryboard.instantiateViewController(withIdentifier:
-            "SettingsPhoneController") as! SettingsPhoneViewController
-        
-        self.present(settingsphonecontroller, animated: true, completion: nil)
+        print("PHONE")
         
         
-        
-    }
+    }*/
     
     
     
