@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
     //UIButtons
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var userCurrencyButton: UIButton!
-    
+
     // UILabels
     @IBOutlet weak var mainUserName: UILabel!
     @IBOutlet weak var userEmail: UILabel!
@@ -82,13 +82,15 @@ class SettingsViewController: UIViewController {
             let email = user?.email
             let name = user?.displayName
             let photoURL = user?.photoURL
-            
+          
             let data = NSData(contentsOf: photoURL!)
             userImage.image = UIImage(data: data as! Data)
             
             mainUserName.text = name
             userName.text = name
             userEmail.text = email
+            
+            
             
             print(mainUserName.text)
             print ("SUCCESS ON SETTINGS WITH USER DATA")
@@ -209,6 +211,16 @@ class SettingsViewController: UIViewController {
         self.present(settingsemailcontroller, animated: true, completion: nil)
         
         
+    }
+    
+    
+    @IBAction func didTapBackButton(_ sender: Any) {
+    
+        let homestoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let homecontroller = homestoryboard.instantiateViewController(withIdentifier:
+            "HomeInitialController") as! HomeViewController
+               self.present(homecontroller, animated: true, completion: nil)
+    
     }
     
 }

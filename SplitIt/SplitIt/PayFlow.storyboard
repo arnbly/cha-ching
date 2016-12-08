@@ -212,7 +212,7 @@
                                 <subviews>
 
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="button-background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-44-qb9">
-                                    
+
                                         <rect key="frame" x="1" y="-1" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
