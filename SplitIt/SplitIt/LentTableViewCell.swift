@@ -15,6 +15,10 @@ class LentTableViewCell: UITableViewCell {
     @IBOutlet weak var transDescriptionLabel: UILabel!
     @IBOutlet weak var transAmountLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var cashIcon: UIImageView!
+    @IBOutlet weak var checkIcon: UIImageView!
+    @IBOutlet weak var tileView: UIView!
+    @IBOutlet weak var cellBackground: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

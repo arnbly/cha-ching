@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OweViewController: UIViewController, UITableViewDataSource{
+class OweViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var userData: UserDataViewController = UserDataViewController()
 
@@ -25,7 +25,7 @@ class OweViewController: UIViewController, UITableViewDataSource{
     
     var owedAmount = Double()
     var owedCount = 0 as Int
-
+    let formatter = NumberFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,6 @@ class OweViewController: UIViewController, UITableViewDataSource{
             }
         }
         
-        let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         
         owedLabel.text = formatter.string(from: owedAmount as NSNumber)
@@ -71,7 +70,7 @@ class OweViewController: UIViewController, UITableViewDataSource{
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return owedCount
+        return userNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,6 +91,24 @@ class OweViewController: UIViewController, UITableViewDataSource{
         cell.transDescriptionLabel.text = description
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //update page header
+            owedAmount = owedAmount - owedTransAmounts[indexPath.row]
+            owedCount -= 1
+            owedLabel.text = formatter.string(from: owedAmount as NSNumber)
+            countLabel.text = "To " + String(owedCount) + " people"
+            
+            //remove data from array
+            self.userNames.remove(at: indexPath.row)
+            self.userProfile.remove(at: indexPath.row)
+            self.owedTransAmounts.remove(at: indexPath.row)
+            self.transDescriptions.remove(at: indexPath.row)
+            
+            self.tableView.reloadData()
+        }
     }
 
 }
