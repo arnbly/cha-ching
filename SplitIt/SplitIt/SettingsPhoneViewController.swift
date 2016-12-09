@@ -22,13 +22,11 @@ class SettingsPhoneViewController: UIViewController {
     }
     
     
-    
-    
-    @IBAction func dismissSettingsPhoneViewControllerButton(_ sender: Any) {
-        
+    @IBAction func didTapDismissButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
 
+        
     }
-   
+    
     
 }
