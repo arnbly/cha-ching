@@ -1,29 +1,31 @@
 //
-//  CustomTableViewCell.swift
+//  HistoryFriendsCellViewTableViewCell.swift
 //  SplitIt
 //
-//  Created by Lauren Tindal on 12/4/16.
+//  Created by Amrutha Krishnan on 12/8/16.
 //  Copyright © 2016 Aaron Bailey. All rights reserved.
 //
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class HistoryFriendsCellViewTableViewCell: UITableViewCell {
+
+    
+    @IBOutlet weak var userProfilePicture: UIImageView!
     
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var userPayment: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
     
-
+    @IBOutlet weak var amount: UILabel!
+    
+    @IBOutlet weak var amountFor: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }

@@ -26,7 +26,7 @@ class RequestReviewViewController: UIViewController {
     }
     
     @IBAction func backArrow(_ sender: Any) {
-        navigationController!.popViewController(animated: true)
+       dismiss(animated: true, completion: nil)
     }
 
 

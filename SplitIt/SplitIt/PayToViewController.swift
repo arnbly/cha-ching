@@ -17,6 +17,7 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var filteredTableData = [String]()
     var resultSearchController = UISearchController()
     var selected = String()
+    var userData: UserDataViewController = UserDataViewController()
     
     let recents = ["Aaron Bailey", "Lauren Tindal", "Charlie Codepath", "Emmeline Kim", "Amrutha Krishnan", "Alex Watson", "Andrea Tovar", "Lisa Johnson", "Linda Thompson", "Laura Lee"]
 
@@ -61,7 +62,7 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
-        let array = (recents as NSArray).filtered(using: searchPredicate)
+        let array = (userData.userNames as NSArray).filtered(using: searchPredicate)
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
@@ -99,7 +100,7 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewFriendsCell") as! NewFriendsCell
-        let recent = recents[indexPath.row]
+        //let recent = recents[indexPath.row]
         //cell.userName.text = recents[indexPath.row]
         //return cell
         
@@ -110,7 +111,8 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
             return cell
         }
         else {
-            cell.userName.text = recents[indexPath.row]
+            cell.userName.text = userData.userNames[indexPath.row]
+            cell.userImage.image = userData.userProfile[indexPath.row]
             cell.isActuallyChecked.isHidden = true
             cell.isChecked.isHidden = false
             return cell
@@ -129,7 +131,7 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @IBAction func didPressBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     
