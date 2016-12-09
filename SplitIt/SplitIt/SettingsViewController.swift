@@ -235,12 +235,16 @@ class SettingsViewController: UIViewController {
     
     
     
-   /* @IBAction func didTapPhoneButton(_ sender: Any) {
+    @IBAction func didTapPhoneButton(_ sender: Any) {
         
-        print("PHONE")
-        
-        
-    }*/
+     let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
+     let settingsphonecontroller = settingsstoryboard.instantiateViewController(withIdentifier:
+     "SettingsPhoneController") as! SettingsPhoneViewController
+     
+     self.present(settingsphonecontroller, animated: true, completion: nil)
+     
+     
+    }
     
     
     

@@ -23,6 +23,8 @@ class SettingsPhoneViewController: UIViewController {
     
     
     @IBAction func didTapDismissButton(_ sender: Any) {
+        print ("TAP WORKS")
+        
         dismiss(animated: true, completion: nil)
 
         
