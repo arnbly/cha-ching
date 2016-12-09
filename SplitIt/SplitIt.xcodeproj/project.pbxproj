@@ -21,6 +21,7 @@
 		3DE1CE1B1DF741B500B95344 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE1CE121DF741B500B95344 /* SystemConfiguration.framework */; };
 		3DE1CE1D1DF751A900B95344 /* NewFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1CE1C1DF751A900B95344 /* NewFriendsCell.swift */; };
 		7D05F3D11DF8BE7F0043E4F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D05F3D01DF8BE7F0043E4F2 /* GoogleService-Info.plist */; };
+		7D281E471DFA4374006FB9CB /* SettingsContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D281E461DFA4374006FB9CB /* SettingsContactViewController.swift */; };
 		7D9BF8D41DF9F4D20078F4F1 /* HistoryFriendsCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BF8D31DF9F4D20078F4F1 /* HistoryFriendsCellViewTableViewCell.swift */; };
 		7DD1AB891DF9A82900557B74 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD1AB871DF9A82900557B74 /* BaseTransition.swift */; };
 		7DD1AB8A1DF9A82900557B74 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD1AB881DF9A82900557B74 /* FadeTransition.swift */; };
@@ -110,6 +111,7 @@
 		5E1A3A76367C4EDBA2FE6111 /* Pods_SplitItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64ED58153748831D7F8A2ADE /* Pods-SplitItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItUITests/Pods-SplitItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D05F3D01DF8BE7F0043E4F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D281E461DFA4374006FB9CB /* SettingsContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsContactViewController.swift; sourceTree = "<group>"; };
 		7D9BF8D31DF9F4D20078F4F1 /* HistoryFriendsCellViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryFriendsCellViewTableViewCell.swift; sourceTree = "<group>"; };
 		7DD1AB871DF9A82900557B74 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		7DD1AB881DF9A82900557B74 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				931DAC201DF7D7DC00D21BDC /* SettingsEmailViewController.swift */,
 				9316DD391DED620000ED01E7 /* SettingsCurrencyViewController.swift */,
 				9316DD1D1DED5F6800ED01E7 /* SettingsViewController.swift */,
+				7D281E461DFA4374006FB9CB /* SettingsContactViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				7DD1AB891DF9A82900557B74 /* BaseTransition.swift in Sources */,
 				9316DD201DED5FA900ED01E7 /* WelcomeViewController.swift in Sources */,
 				3DE1CE1D1DF751A900B95344 /* NewFriendsCell.swift in Sources */,
+				7D281E471DFA4374006FB9CB /* SettingsContactViewController.swift in Sources */,
 				7DD1AB8A1DF9A82900557B74 /* FadeTransition.swift in Sources */,
 				9316DCC91DED384600ED01E7 /* ViewController.swift in Sources */,
 				9316DD361DED618900ED01E7 /* PaySuccessViewController.swift in Sources */,
