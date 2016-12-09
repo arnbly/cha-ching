@@ -11,9 +11,9 @@ import UIKit
 class NewFriendsCell: UITableViewCell {
     
     @IBOutlet weak var isChecked: UIImageView!
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var isActuallyChecked: UIImageView!
-    @IBOutlet weak var userImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

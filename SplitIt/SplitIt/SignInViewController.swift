@@ -200,7 +200,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                             // settingscontroller.profilePicture = profileImage!
                             
                             self.present(settingscontroller, animated: true, completion: nil)
- 
+                            
  
                             
                         }
@@ -210,7 +210,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                     }
             }
             
-          //    self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
+            //  self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
             
         })
         

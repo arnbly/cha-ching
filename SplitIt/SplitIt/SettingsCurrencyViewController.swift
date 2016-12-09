@@ -97,15 +97,6 @@ class SettingsCurrencyViewController: UIViewController {
         settingscontroller.curr = currency
         print("settingsController.curr:", settingscontroller.curr)
         
-       /*
-        let transition = CATransition()
-        transition.duration = 0.1
-        transition.type = kCATransitionMoveIn
-        transition.subtype = kCATransitionFromTop
-        view.window!.layer.add(transition, forKey: kCATransition)
- 
-*/
-        
         self.present(settingscontroller, animated: true, completion: nil)
         
         
