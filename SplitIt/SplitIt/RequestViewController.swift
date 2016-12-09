@@ -202,8 +202,6 @@ class RequestViewController: UIViewController, UITableViewDataSource {
                     self.lentTransAmounts.remove(at: arrayLoc!)
                     self.transDescriptions.remove(at: arrayLoc!)
                     
-                    //cell.
-                    
                     self.tableView.reloadData()
                 })
                 
