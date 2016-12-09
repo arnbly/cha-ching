@@ -39,6 +39,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i2b-7a-kNB">
                                 <rect key="frame" x="164" y="59" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="home"/>
                                 <connections>
                                     <action selector="goHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LA7-Ai-Mdc"/>
                                 </connections>
