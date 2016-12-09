@@ -14,9 +14,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var historySearch: UISearchBar!
     
     var text: String!
-    let names = ["Amrutha Krishnan", "Lauren Tindal"]
-    let desc = [" Utilities", "Dinner","Dinner and Drinks","Lunch","Grocery"]
-    let amt = ["$15","$15","$20", "$12","$10"]
+    let names = ["Clare Corthell", "Lauren Tindal"]
+    let desc = [" Dinner", "Dinner","Dinner and Drinks","Lunch","Grocery"]
+    let amt = ["$25","$15","$20", "$12","$10"]
 
     var digits = [Int]()
     
@@ -58,14 +58,14 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
        
         
-        cell.userName.text = userData.userNames[indexPath.row]
+        cell.userName.text = names[indexPath.row]
         cell.amount.text = amt[indexPath.row]
         cell.amountFor.text = desc[indexPath.row]
    
         cell.userProfilePicture.layer.cornerRadius = cell.userProfilePicture.frame.size.width/2
         cell.userProfilePicture.clipsToBounds = true
         
-        cell.userProfilePicture.image = userData.splitProfile[indexPath.row]
+        cell.userProfilePicture.image = userData.userProfile[indexPath.row]
         
         
         return cell
