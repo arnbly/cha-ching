@@ -19,9 +19,7 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView2: UITableView!
     @IBOutlet weak var evenlyButton: UIButton!
     @IBOutlet weak var customButton: UIButton!
-    
-    var userData: UserDataViewController = UserDataViewController()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +28,7 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         tableView2.isHidden = true
         tableView2.delegate = self
         tableView2.dataSource = self
-
+        
         lentTotal.text = text
     }
     
@@ -50,7 +48,7 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func backArrow(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        navigationController!.popViewController(animated: true)
     }
     
     @IBAction func didPressX(_ sender: Any)  {
@@ -74,12 +72,11 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         let payments = totalPay/(names.count)
         let userPayment = String(describing: payments)
         var cell:UITableViewCell?
-        //let name = names[indexPath.row]
+        let name = names[indexPath.row]
         
         if tableView == self.tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTable") as! CustomTableViewCell
-            cell.userName.text = userData.splitNames[indexPath.row]
-            cell.userImage.image = userData.splitProfile[indexPath.row]
+            cell.userName.text = name
             cell.userPayment.text = userPayment
             return cell
             
@@ -87,17 +84,14 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         
         if tableView == self.tableView2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewTable") as! NewTableViewCell
-            cell.userName.text = userData.splitNames[indexPath.row]
-            cell.userImage.image = userData.splitProfile[indexPath.row]
-            //cell.userName.text = String(describing: userData.splitNames)
-            
+            cell.userName.text = name
             return cell
             
-            /*let text = cell.userPayment.text!
+            let text = cell.userPayment.text!
             for element in text.characters
             {
                 digits.append(Int(String(element))!)
-            }*/
+            }
 
         }
         
@@ -107,8 +101,8 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var destinationViewController = segue.destination as! RequestReviewViewController
         
-        //destinationViewController.text = digits.
-        
+        destinationViewController.text = lentTotal.text
+
     }
     
     @IBAction func didTap(_ sender: UITapGestureRecognizer) {
