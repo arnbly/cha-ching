@@ -48,7 +48,6 @@
 		9316DD201DED5FA900ED01E7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD1F1DED5FA900ED01E7 /* WelcomeViewController.swift */; };
 		9316DD221DED5FD400ED01E7 /* OweViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD211DED5FD400ED01E7 /* OweViewController.swift */; };
 		9316DD241DED5FFB00ED01E7 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD231DED5FFB00ED01E7 /* PersonDetailViewController.swift */; };
-		9316DD261DED603300ED01E7 /* RequestedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD251DED603300ED01E7 /* RequestedViewController.swift */; };
 		9316DD281DED605100ED01E7 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD271DED605100ED01E7 /* TransactionDetailViewController.swift */; };
 		9316DD2A1DED60B100ED01E7 /* RequestSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD291DED60B100ED01E7 /* RequestSplitViewController.swift */; };
 		9316DD2C1DED60D600ED01E7 /* RequestWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316DD2B1DED60D600ED01E7 /* RequestWithViewController.swift */; };
@@ -65,7 +64,7 @@
 		931DAC2E1DF9384100D21BDC /* OwedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC2D1DF9384100D21BDC /* OwedTableViewCell.swift */; };
 		931DAC321DF949C600D21BDC /* LentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC311DF949C600D21BDC /* LentTableViewCell.swift */; };
 		931DAC341DF95A1500D21BDC /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DAC331DF95A1500D21BDC /* DetailTableViewCell.swift */; };
-		93D4AE6D1DFA0D9C008EDF0B /* lentSwipeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D4AE6C1DFA0D9C008EDF0B /* lentSwipeTableCell.swift */; };
+		93E287B01DFCB47800C03AA8 /* LentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E287AF1DFCB47800C03AA8 /* LentViewController.swift */; };
 		9ECF8C5084C77E9378393D98 /* Pods_SplitIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */; };
 		B45B9CC5148C59778CB60133 /* Pods_SplitItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */; };
 		C75F8874A7983DDE8E5D9475 /* Pods_SplitItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1A3A76367C4EDBA2FE6111 /* Pods_SplitItTests.framework */; };
@@ -141,7 +140,6 @@
 		9316DD1F1DED5FA900ED01E7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9316DD211DED5FD400ED01E7 /* OweViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OweViewController.swift; sourceTree = "<group>"; };
 		9316DD231DED5FFB00ED01E7 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
-		9316DD251DED603300ED01E7 /* RequestedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestedViewController.swift; sourceTree = "<group>"; };
 		9316DD271DED605100ED01E7 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		9316DD291DED60B100ED01E7 /* RequestSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSplitViewController.swift; sourceTree = "<group>"; };
 		9316DD2B1DED60D600ED01E7 /* RequestWithViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestWithViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +157,7 @@
 		931DAC2D1DF9384100D21BDC /* OwedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwedTableViewCell.swift; sourceTree = "<group>"; };
 		931DAC311DF949C600D21BDC /* LentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LentTableViewCell.swift; sourceTree = "<group>"; };
 		931DAC331DF95A1500D21BDC /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailTableViewCell.swift; path = ../DetailTableViewCell.swift; sourceTree = "<group>"; };
-		93D4AE6C1DFA0D9C008EDF0B /* lentSwipeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lentSwipeTableCell.swift; sourceTree = "<group>"; };
+		93E287AF1DFCB47800C03AA8 /* LentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LentViewController.swift; sourceTree = "<group>"; };
 		97888E0E6E88B3978B11B721 /* Pods-SplitItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItTests/Pods-SplitItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7F8D27DC9BF1152D356A018 /* Pods_SplitItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC452A6565BB1DAC9D178E41 /* Pods_SplitIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,7 +224,6 @@
 		9316DCBA1DED384600ED01E7 = {
 			isa = PBXGroup;
 			children = (
-				93D4AE6C1DFA0D9C008EDF0B /* lentSwipeTableCell.swift */,
 				9316DCC51DED384600ED01E7 /* SplitIt */,
 				9316DCDA1DED384600ED01E7 /* SplitItTests */,
 				9316DCE51DED384600ED01E7 /* SplitItUITests */,
@@ -317,11 +314,11 @@
 				931DAC2D1DF9384100D21BDC /* OwedTableViewCell.swift */,
 				9316DD211DED5FD400ED01E7 /* OweViewController.swift */,
 				9316DD231DED5FFB00ED01E7 /* PersonDetailViewController.swift */,
-				9316DD251DED603300ED01E7 /* RequestedViewController.swift */,
 				9316DD271DED605100ED01E7 /* TransactionDetailViewController.swift */,
 				9316DD151DED5F1600ED01E7 /* HomeViewController.swift */,
 				931DAC331DF95A1500D21BDC /* DetailTableViewCell.swift */,
 				931DAC311DF949C600D21BDC /* LentTableViewCell.swift */,
+				93E287AF1DFCB47800C03AA8 /* LentViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -694,6 +691,7 @@
 				9316DD321DED615900ED01E7 /* PayToViewController.swift in Sources */,
 				9316DD201DED5FA900ED01E7 /* WelcomeViewController.swift in Sources */,
 				3DE1CE1D1DF751A900B95344 /* NewFriendsCell.swift in Sources */,
+				93E287B01DFCB47800C03AA8 /* LentViewController.swift in Sources */,
 				9316DCC91DED384600ED01E7 /* ViewController.swift in Sources */,
 				9316DD361DED618900ED01E7 /* PaySuccessViewController.swift in Sources */,
 				9316DD341DED617300ED01E7 /* PayReviewViewController.swift in Sources */,
@@ -711,14 +709,12 @@
 				9316DD301DED612800ED01E7 /* RequestSuccessViewController.swift in Sources */,
 				931DAC231DF7D7FA00D21BDC /* SettingsNameViewController.swift in Sources */,
 				9316DD2A1DED60B100ED01E7 /* RequestSplitViewController.swift in Sources */,
-				93D4AE6D1DFA0D9C008EDF0B /* lentSwipeTableCell.swift in Sources */,
 				9316DCF51DED3C4A00ED01E7 /* SignInViewController.swift in Sources */,
 				3D731F241DF6959A00CE76E8 /* NewTableViewCell.swift in Sources */,
 				9316DD221DED5FD400ED01E7 /* OweViewController.swift in Sources */,
 				9316DD1C1DED5F5200ED01E7 /* HistoryViewController.swift in Sources */,
 				3D62924F1DF417D700FCA33E /* CustomTableViewCell.swift in Sources */,
 				9316DD281DED605100ED01E7 /* TransactionDetailViewController.swift in Sources */,
-				9316DD261DED603300ED01E7 /* RequestedViewController.swift in Sources */,
 				9316DD161DED5F1600ED01E7 /* HomeViewController.swift in Sources */,
 				9316DD2C1DED60D600ED01E7 /* RequestWithViewController.swift in Sources */,
 				9316DD1E1DED5F6800ED01E7 /* SettingsViewController.swift in Sources */,

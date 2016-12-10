@@ -12,11 +12,14 @@ class RequestReviewViewController: UIViewController {
 
     //var forStringPassed = ""
     @IBOutlet weak var forField: UILabel!
+    @IBOutlet weak var lentTotal: UILabel!
+    
+    var text: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //forField.text = forStringPassed
+
+        lentTotal.text = text
         // Do any additional setup after loading the view.
     }
 

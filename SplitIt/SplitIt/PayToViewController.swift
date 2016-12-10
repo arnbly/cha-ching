@@ -26,7 +26,13 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
 
-        totalLabel.text = text
+        //Formats input as dollars
+        let convertStrtoInt = Int(text)
+        let myNumber = convertStrtoInt!
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        totalLabel.text = formatter.string(from: myNumber as NSNumber)
         
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
@@ -76,7 +82,7 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func didPressX(_ sender: Any) {
-        // [1] Create a new "Storyboard2" instance.
+        // [1] Create a new "Storyboard" instance.
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         
         // [2] Create an instance of the storyboard's initial view controller.
@@ -129,7 +135,7 @@ class PayToViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @IBAction func didPressBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        navigationController!.popViewController(animated: true)
     }
     
     

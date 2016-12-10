@@ -25,6 +25,15 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Formats input as dollars
+        let convertStrtoInt = Int(text)
+        let myNumber = convertStrtoInt!
+            
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        totalLabel.text = formatter.string(from: myNumber as NSNumber)
+
+        
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.allowsSelection = true
@@ -37,8 +46,6 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
             // Fallback on earlier versions
             let _ = self.resultSearchController.view          // iOS 8
         }
-        
-        totalLabel.text = text
         
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
@@ -83,7 +90,7 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
     }
    
     @IBAction func didPressX(_ sender: Any) {
-        // [1] Create a new "Storyboard2" instance.
+        // [1] Create a new "Storyboard" instance.
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         
         // [2] Create an instance of the storyboard's initial view controller.
@@ -92,6 +99,7 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         // [3] Display the new view controller.
         present(controller, animated: true, completion: nil)
     }
+    
     @IBAction func backArrow(_ sender: Any) {
         navigationController!.popViewController(animated: true)
     }

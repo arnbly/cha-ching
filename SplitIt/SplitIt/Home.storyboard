@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="-375.19999999999999" y="165.06746626686657"/>
         </scene>
-        <!--Request View Controller-->
+        <!--Lent View Controller-->
         <scene sceneID="hjg-yF-gkC">
             <objects>
-                <viewController id="EUd-DX-exX" customClass="RequestViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EUd-DX-exX" customClass="LentViewController" customModule="SplitIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vja-mG-1HG"/>
                         <viewControllerLayoutGuide type="bottom" id="fbJ-O0-dSO"/>
@@ -215,7 +215,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-arrow-left-white"/>
                                         <connections>
-                                            <action selector="didTapBack:" destination="EUd-DX-exX" eventType="touchUpInside" id="cEh-7D-lsy"/>
+                                            <action selector="didTapBack:" destination="EUd-DX-exX" eventType="touchUpInside" id="9gS-dw-JfH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -330,9 +330,9 @@
                     <navigationItem key="navigationItem" id="Gck-nh-s1A"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="countLabel" destination="yHL-Xo-1lg" id="faV-Jb-vV8"/>
-                        <outlet property="lentLabel" destination="kMz-lS-0DF" id="QAa-5c-ZGL"/>
-                        <outlet property="tableView" destination="yem-hY-9Cc" id="PWt-VY-Mzp"/>
+                        <outlet property="countLabel" destination="yHL-Xo-1lg" id="Bp6-Rp-9lJ"/>
+                        <outlet property="lentLabel" destination="kMz-lS-0DF" id="xHP-3U-cb4"/>
+                        <outlet property="tableView" destination="yem-hY-9Cc" id="KO2-eo-GYF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AA-l9-msO" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,6 +15,8 @@ class PayReviewViewController: UIViewController, PayPalPaymentDelegate {
     @IBOutlet weak var payPalButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
+
+    
     var environment:String = PayPalEnvironmentNoNetwork {
         willSet(newEnvironment) {
             if (newEnvironment != environment) {
@@ -27,7 +29,7 @@ class PayReviewViewController: UIViewController, PayPalPaymentDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         totalPay.text = text
 
         //PayPal Setup
@@ -108,9 +110,6 @@ class PayReviewViewController: UIViewController, PayPalPaymentDelegate {
     
     }
     
-    
-    
-    
     @IBAction func didPressDone(_ sender: Any) {
         // [1] Create a new "Storyboard2" instance.
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
@@ -124,9 +123,15 @@ class PayReviewViewController: UIViewController, PayPalPaymentDelegate {
     }
     
     
+    @IBAction func didPressBack(_ sender: UIButton) {
+        navigationController!.popViewController(animated: true)
+    }
     
-    @IBAction func didPressBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destinationViewController = segue.destination as! PayToViewController
+        
+        destinationViewController.text = totalPay.text
+        
     }
     
 

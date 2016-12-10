@@ -19,7 +19,7 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView2: UITableView!
     @IBOutlet weak var evenlyButton: UIButton!
     @IBOutlet weak var customButton: UIButton!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +28,7 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         tableView2.isHidden = true
         tableView2.delegate = self
         tableView2.dataSource = self
-
+        
         lentTotal.text = text
     }
     
@@ -101,8 +101,8 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var destinationViewController = segue.destination as! RequestReviewViewController
         
-        //destinationViewController.text = digits.
-        
+        destinationViewController.text = lentTotal.text
+
     }
     
     @IBAction func didTap(_ sender: UITapGestureRecognizer) {
