@@ -11,7 +11,6 @@ import FBSDKLoginKit
 import FirebaseAuth
 import Firebase
 
-
 class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
@@ -201,7 +200,11 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                             // settingscontroller.profilePicture = profileImage!
                             
                             self.present(settingscontroller, animated: true, completion: nil)
+<<<<<<< HEAD
                             
+=======
+ 
+>>>>>>> master
  
                             
                         }
@@ -211,7 +214,11 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                     }
             }
             
+<<<<<<< HEAD
             //  self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
+=======
+          //    self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
+>>>>>>> master
             
         })
         

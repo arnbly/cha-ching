@@ -57,12 +57,14 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - MGSwipeTableCell (1.5.6)
   - PayPal-iOS-SDK (2.16.1):
     - PayPal-iOS-SDK/CardIO (= 2.16.1)
     - PayPal-iOS-SDK/Core (= 2.16.1)
   - PayPal-iOS-SDK/CardIO (2.16.1):
     - CardIO (~> 5.4.1)
   - PayPal-iOS-SDK/Core (2.16.1)
+  - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -71,7 +73,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - MGSwipeTableCell
   - PayPal-iOS-SDK
+  - SWTableViewCell (~> 0.3.7)
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -90,8 +94,10 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   PayPal-iOS-SDK: 774ac7de2d7c3b0ee7e8a35f8b347fd07787321b
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
-PODFILE CHECKSUM: 1e630ed0530a437b467721b03526a28c3733401b
+PODFILE CHECKSUM: 278a253fab096ee693294d22c9c9bb314ecfc00a
 
 COCOAPODS: 1.1.1

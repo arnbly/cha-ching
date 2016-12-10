@@ -223,7 +223,7 @@
                                             <color key="titleColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="gIP-SS-KEs" kind="show" id="Ca0-0l-wb0"/>
+                                            <segue destination="gIP-SS-KEs" kind="presentation" id="Ca0-0l-wb0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -346,7 +346,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-left-icon"/>
                                         <connections>
-                                            <action selector="didPressBack:" destination="gIP-SS-KEs" eventType="touchUpInside" id="18x-kR-jNE"/>
+                                            <action selector="didPressBack:" destination="gIP-SS-KEs" eventType="touchUpInside" id="1vM-hK-1eP"/>
                                         </connections>
                                     </button>
                                 </subviews>

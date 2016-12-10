@@ -32,6 +32,9 @@ class SettingsViewController: UIViewController {
     var curr = String()
     var edittedCurr = String()
     
+    var fadeTransition: FadeTransition!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -182,12 +185,27 @@ class SettingsViewController: UIViewController {
         let settingscurrencycontroller = settingsstoryboard.instantiateViewController(withIdentifier:
             "SettingsCurrencyController") as! SettingsCurrencyViewController
         settingscurrencycontroller.currency = edittedCurr
+        /*
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = kCATransition
+        transition.subtype = kCATransitionFromBottom
+        view.window!.layer.add(transition, forKey: kCATransition)
+        */
         self.present(settingscurrencycontroller, animated: true, completion: nil)
+    }
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let settingscurrencycontroller = segue.destination as! SettingsCurrencyViewController
         
+        settingscurrencycontroller.modalPresentationStyle = .custom
+        settingscurrencycontroller.transitioningDelegate = fadeTransition
+       // fadeTransition.duration = 2 as! TimeInterval
         
+        settingscurrencycontroller.currency = edittedCurr
         
     }
-    
+    */
     
     @IBAction func didTapUserNameEditButton(_ sender: UIButton) {
         
@@ -208,12 +226,31 @@ class SettingsViewController: UIViewController {
         let settingsemailcontroller = settingsstoryboard.instantiateViewController(withIdentifier:
             "SettingsEmailController") as! SettingsEmailViewController
         settingsemailcontroller.emailvalue = userEmail.text!
+        
         self.present(settingsemailcontroller, animated: true, completion: nil)
         
         
     }
     
     
+<<<<<<< HEAD
+=======
+    
+    
+    @IBAction func didTapPhoneButton(_ sender: Any) {
+        
+     let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
+     let settingsphonecontroller = settingsstoryboard.instantiateViewController(withIdentifier:
+     "SettingsPhoneController") as! SettingsPhoneViewController
+     
+     self.present(settingsphonecontroller, animated: true, completion: nil)
+     
+     
+    }
+    
+    
+    
+>>>>>>> master
     @IBAction func didTapBackButton(_ sender: Any) {
     
         let homestoryboard = UIStoryboard(name: "Home", bundle: nil)
