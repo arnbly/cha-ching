@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
-class OweViewController: UIViewController, UITableViewDataSource{
+class OweViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var userData: UserDataViewController = UserDataViewController()
 
@@ -25,7 +26,12 @@ class OweViewController: UIViewController, UITableViewDataSource{
     
     var owedAmount = Double()
     var owedCount = 0 as Int
-
+    let formatter = NumberFormatter()
+    
+    let greenColor = UIColor(red: 85/255, green: 229/255, blue: 179/255, alpha: 1)
+    let purpleColor = UIColor(red: 127/255, green: 146/255, blue: 255/255, alpha: 1)
+    let grayColor = UIColor(red: 214/255, green: 216/255, blue: 219/255, alpha: 1)
+    let redColor = UIColor(red: 255/255, green: 140/255, blue: 127/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +58,6 @@ class OweViewController: UIViewController, UITableViewDataSource{
             }
         }
         
-        let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         
         owedLabel.text = formatter.string(from: owedAmount as NSNumber)
@@ -71,12 +76,12 @@ class OweViewController: UIViewController, UITableViewDataSource{
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return owedCount
+        return userNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as! OwedTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as! owedSwipeTableCell
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -91,7 +96,60 @@ class OweViewController: UIViewController, UITableViewDataSource{
         cell.transAmountLabel.text = formatter.string(from: transaction as NSNumber)
         cell.transDescriptionLabel.text = description
         
+        cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"cash-icon.png"), backgroundColor: greenColor)]
+        cell.rightButtons = [MGSwipeButton(title: "", icon: UIImage(named:"check-icon.png"), backgroundColor: purpleColor)]
+        
+        //configure left buttons
+        cell.leftSwipeSettings.transition = MGSwipeTransition.drag
+        cell.leftSwipeSettings.threshold = 100
+        
+        cell.leftExpansion.expansionColor = greenColor
+        cell.leftExpansion.fillOnTrigger = true
+        cell.leftExpansion.buttonIndex = 0
+        cell.leftExpansion.threshold = 100
+        
+        //configure right buttons
+        cell.rightSwipeSettings.transition = MGSwipeTransition.drag
+        cell.leftExpansion.expansionColor = purpleColor
+        cell.leftExpansion.fillOnTrigger = true
+        
         return cell
+    }
+    
+//    func deleteMail(_ path:IndexPath) {
+//    //    tableView.deleteRows(at: [path], with: .left);
+//    }
+//    
+//    func swipeTableCell(_ cell: MGSwipeTableCell, swipeButtonsFor direction: MGSwipeDirection, swipeSettings: MGSwipeSettings, expansionSettings: MGSwipeExpansionSettings) -> [UIView]? {
+//        
+//        expansionSettings.buttonIndex = 0
+//        
+//        
+//        expansionSettings.fillOnTrigger = true;
+//        expansionSettings.threshold = 2;
+//            
+//        cell.refreshContentView();
+//    
+//        return cell
+//    }
+
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //update page header
+            owedAmount = owedAmount - owedTransAmounts[indexPath.row]
+            owedCount -= 1
+            owedLabel.text = formatter.string(from: owedAmount as NSNumber)
+            countLabel.text = "To " + String(owedCount) + " people"
+            
+            //remove data from array
+            self.userNames.remove(at: indexPath.row)
+            self.userProfile.remove(at: indexPath.row)
+            self.owedTransAmounts.remove(at: indexPath.row)
+            self.transDescriptions.remove(at: indexPath.row)
+            
+            self.tableView.reloadData()
+        }
     }
 
 }

@@ -82,26 +82,27 @@ class HomeViewController: UIViewController {
         return formatter.string(from: number)!
     }
 
-  
     
-    @IBAction func didTapHistoryButton(_ sender: Any) {
-        let historytoryboard = UIStoryboard(name: "History", bundle: nil)
-        let historycontroller = historytoryboard.instantiateViewController(withIdentifier:
-            "HistoryFlowSB") as! HistoryViewController
-        self.present(historycontroller, animated: true, completion: nil)
+    @IBAction func didPressSettings(_ sender: Any) {
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "SettingsSB") as UIViewController
+        
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
     }
     
-    
-    
-    @IBAction func didTapSettingsButton(_ sender: Any) {
-        let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
-        let settingscontroller = settingsstoryboard.instantiateViewController(withIdentifier:
-            "SettingsSB") as! SettingsViewController
-        self.present(settingscontroller, animated: true, completion: nil)
+    @IBAction func didPressHistory(_ sender: Any) {
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "History", bundle: nil)
         
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "HistoryFlowSB") as UIViewController
         
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
     }
-    
-    
 
 }

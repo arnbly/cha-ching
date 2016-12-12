@@ -12,11 +12,14 @@ class RequestReviewViewController: UIViewController {
 
     //var forStringPassed = ""
     @IBOutlet weak var forField: UILabel!
+    @IBOutlet weak var lentTotal: UILabel!
+    
+    var text: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //forField.text = forStringPassed
+
+        lentTotal.text = text
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +29,7 @@ class RequestReviewViewController: UIViewController {
     }
     
     @IBAction func backArrow(_ sender: Any) {
-       dismiss(animated: true, completion: nil)
+        navigationController!.popViewController(animated: true)
     }
 
 

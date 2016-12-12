@@ -31,7 +31,7 @@ class PayViewController: UIViewController {
     }
 
     @IBAction func didPressBack(_ sender: Any) {
-        // [1] Create a new "Storyboard2" instance.
+        // [1] Create a new "Storyboard" instance.
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         
         // [2] Create an instance of the storyboard's initial view controller.
@@ -43,7 +43,7 @@ class PayViewController: UIViewController {
     
     
     @IBAction func didPressX(_ sender: Any) {
-        // [1] Create a new "Storyboard2" instance.
+        // [1] Create a new "Storyboard" instance.
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         
         // [2] Create an instance of the storyboard's initial view controller.
@@ -55,3 +55,4 @@ class PayViewController: UIViewController {
     
 
 }
+

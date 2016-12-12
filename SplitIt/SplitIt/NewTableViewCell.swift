@@ -12,7 +12,7 @@ class NewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userPayment: UITextField!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
