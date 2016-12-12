@@ -56,6 +56,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         present(controller, animated: true, completion: nil)
         
     }
+    
     func handleCustomFBLogin() {
         
         FBSDKLoginManager().logIn(withReadPermissions: ["email","public_profile"], from: self) {
@@ -122,8 +123,6 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
             let usersReference = ref.child("users").child(uid)
             
             
-            
-            
             FBSDKGraphRequest(graphPath: "/me", parameters:
                 ["fields": "id, name, email, picture.type(large)"]).start { (connection, result, err) in
                     
@@ -133,7 +132,6 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                     }
                     else {
                         if let dataDict = result as? [String:AnyObject] {
-                            
                             
                             // Photo URL code
                             let picture = dataDict["picture"] as? [String:AnyObject]
@@ -161,16 +159,11 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                              var userCurrency = String()
                              userCurrency = "USD"
                             
-                            
                             print("User Name is: \(username)")
                             print("User Email is: \(useremail)")
                             print("User Image URL is: \(pictureURL)")
                             
-                            
-                            
                             let values = ["displayName": name, "email": email, "photoURL": profilePictureURL, "currency":userCurrency] as [String : Any]
-                            
-                            
                             
                             //Update our databse by using the child database reference above called usersReference
                             usersReference.setValue(values, withCompletionBlock: { (err, ref) in
@@ -179,16 +172,10 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                                     print(err as Any)
                                     return
                                 }
-                                
-                                
-                                
                                 print(ref)
                                 
                                 print("---> Save the user successfully into Firebase database")
                             })
-                            
-                            
-                            
                             
                             //Passing data to Settings View Controller
                             
@@ -199,24 +186,17 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                             // settingscontroller.email = useremail as! String
                             // settingscontroller.profilePicture = profileImage!
                             
-                            self.present(settingscontroller, animated: true, completion: nil)
-                            
- 
-                            
+                            //self.present(settingscontroller, animated: true, completion: nil)
+                            self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
+
                         }
                         
                         print(result as Any)
                         
                     }
             }
-            
-            //  self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
-            
         })
-        
     }
-    
-    
 }
 
 

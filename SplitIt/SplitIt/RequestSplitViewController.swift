@@ -13,6 +13,14 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var lentTotal: UILabel!
     var text: String!
     let names = ["Aaron Bailey", "Amrutha Krishnan", "Lauren Tindal"]
+    
+    //User Profile Photos
+    var userProfile: [UIImage] = [
+        UIImage(named: "m7.png")!,
+        UIImage(named: "f2.png")!,
+        UIImage(named: "f1.png")!,
+        ]
+    
     var digits = [Int]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -73,10 +81,12 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         let userPayment = String(describing: payments)
         var cell:UITableViewCell?
         let name = names[indexPath.row]
+        let userImage = userProfile[indexPath.row]
         
         if tableView == self.tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTable") as! CustomTableViewCell
             cell.userName.text = name
+            cell.userPhoto.image = userImage
             cell.userPayment.text = userPayment
             return cell
             
@@ -85,6 +95,7 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         if tableView == self.tableView2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewTable") as! NewTableViewCell
             cell.userName.text = name
+            cell.profileImage.image = userImage
             return cell
             
             let text = cell.userPayment.text!

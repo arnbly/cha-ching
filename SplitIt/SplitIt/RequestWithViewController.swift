@@ -17,6 +17,20 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
 
     let recents = ["Aaron Bailey", "Lauren Tindal", "Charlie Codepath", "Emmeline Kim", "Amrutha Krishnan", "Alex Watson", "Andrea Tovar", "Lisa Johnson", "Linda Thompson", "Laura Lee"]
     
+    //User Profile Photos
+    var userProfile: [UIImage] = [
+        UIImage(named: "m7.png")!,
+        UIImage(named: "f2.png")!,
+        UIImage(named: "m1.png")!,
+        UIImage(named: "f1.png")!,
+        UIImage(named: "f3.png")!,
+        UIImage(named: "m3.png")!,
+        UIImage(named: "f5.png")!,
+        UIImage(named: "f4.png")!,
+        UIImage(named: "f6.png")!,
+        UIImage(named: "f7.png")!,
+        ]
+    
     var filteredTableData = [String]()
     var resultSearchController = UISearchController()
     var checked = [Bool]()
@@ -119,6 +133,7 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! FriendsCell
         let recent = recents[indexPath.row]
+        let userImage = userProfile[indexPath.row]
         
         if (self.resultSearchController.isActive) {
             cell.label.text = filteredTableData[indexPath.row]
@@ -128,6 +143,7 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         }
         else {
             cell.label.text = recents[indexPath.row]
+            cell.profileImage.image = userImage
             cell.selectDefault.isHidden = false
             cell.selectActive.isHidden = true
 

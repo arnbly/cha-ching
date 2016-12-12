@@ -206,30 +206,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nV-y1-jaz" userLabel="SecondaryButtonView">
-                                <rect key="frame" x="0.0" y="549" width="375" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="button-background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="LFR-hi-bHa">
-                                        <rect key="frame" x="1" y="-1" width="375" height="118"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDl-o9-0PR">
-                                        <rect key="frame" x="52" y="33" width="273" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
-                                        <state key="normal" title="Next" backgroundImage="secondary-button-shell">
-                                            <color key="titleColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="73N-ku-hbX" kind="show" identifier="scanPageSegue" id="ZzY-Xa-lwj"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" allowsSelectionDuringEditing="YES" allowsMultipleSelection="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fF1-lD-sv3">
-                                <rect key="frame" x="0.0" y="195" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="195" width="375" height="472"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.79734462530000005" green="1" blue="0.88463662160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -275,12 +253,35 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="wYB-mG-zMZ" id="6fG-m6-Br2"/>
+                                            <outlet property="profileImage" destination="BJX-kC-vPS" id="ahf-pj-wUW"/>
                                             <outlet property="selectActive" destination="JF8-1Q-dcv" id="Mk1-gG-kc7"/>
                                             <outlet property="selectDefault" destination="YY0-KJ-UXd" id="cjy-05-PON"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nV-y1-jaz" userLabel="SecondaryButtonView">
+                                <rect key="frame" x="0.0" y="549" width="375" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="button-background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="LFR-hi-bHa">
+                                        <rect key="frame" x="1" y="-1" width="375" height="118"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDl-o9-0PR">
+                                        <rect key="frame" x="52" y="33" width="273" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
+                                        <state key="normal" title="Next" backgroundImage="secondary-button-shell">
+                                            <color key="titleColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="73N-ku-hbX" kind="show" identifier="scanPageSegue" id="ZzY-Xa-lwj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -412,7 +413,7 @@
                                         <connections>
                                             <outlet property="userName" destination="zRS-hW-f8t" id="JbS-e0-uld"/>
                                             <outlet property="userPayment" destination="SLo-U1-4yN" id="gjB-ec-GkL"/>
-                                            <outlet property="userPhoto" destination="XRD-Aw-r0N" id="jOm-Ka-lUL"/>
+                                            <outlet property="userPhoto" destination="XRD-Aw-r0N" id="ppY-dO-VDh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -455,6 +456,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="profileImage" destination="PXc-vZ-i7J" id="RJh-eV-6OV"/>
                                             <outlet property="userName" destination="mpe-Ji-AdD" id="885-XJ-tyh"/>
                                             <outlet property="userPayment" destination="VtE-7Z-Sfn" id="VkL-I0-2vZ"/>
                                         </connections>
@@ -757,7 +759,7 @@
                 <navigationController navigationBarHidden="YES" id="joc-3J-fET" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KQj-K2-5QR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KQj-K2-5QR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -47,6 +47,9 @@
                                         <rect key="frame" x="11" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="back-arrow-left-white"/>
+                                        <connections>
+                                            <action selector="didTapBack:" destination="jER-8y-fRp" eventType="touchUpInside" id="eEs-PD-fTj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWq-dj-udZ">
                                         <rect key="frame" x="295" y="30" width="62" height="40"/>

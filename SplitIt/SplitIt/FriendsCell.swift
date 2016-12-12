@@ -13,6 +13,7 @@ class FriendsCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var selectDefault: UIImageView!
     @IBOutlet weak var selectActive: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
