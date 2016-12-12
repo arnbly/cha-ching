@@ -193,14 +193,14 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                             
                             //Passing data to Settings View Controller
                             
-                            let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
+                            /*let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
                             let settingscontroller = settingsstoryboard.instantiateViewController(withIdentifier: "SettingsSB") as! SettingsViewController
                             
                             //  settingscontroller.name = username as! String
                             // settingscontroller.email = useremail as! String
                             // settingscontroller.profilePicture = profileImage!
                             
-                            self.present(settingscontroller, animated: true, completion: nil)
+                            self.present(settingscontroller, animated: true, completion: nil)*/
  
  
                             
@@ -211,7 +211,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                     }
             }
             
-          //    self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
+          self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
             
         })
         
