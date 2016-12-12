@@ -39,7 +39,6 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i2b-7a-kNB">
                                 <rect key="frame" x="164" y="59" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="home"/>
                                 <connections>
                                     <action selector="goHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LA7-Ai-Mdc"/>
                                 </connections>
@@ -88,7 +87,7 @@ SplitIt will handle the bill for you.</string>
                                                 <color key="textColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="welcome-1" id="NCe-RC-4uN">
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="welcome1" id="NCe-RC-4uN">
                                                 <rect key="frame" x="0.0" y="226" width="375" height="441"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
@@ -163,16 +162,16 @@ SplitIt will handle the bill for you.</string>
                                                 <color key="textColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="welcome-4" id="n1Y-zC-V2b">
-                                                <rect key="frame" x="-9" y="214" width="385" height="453"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="welcome4" id="n1Y-zC-V2b">
+                                                <rect key="frame" x="-9" y="214" width="385" height="298"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" misplaced="YES" image="ColorImage" id="QgT-QY-3om">
-                                                <rect key="frame" x="-4" y="564" width="375" height="98"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" misplaced="YES" image="button-background-gradient" id="QgT-QY-3om">
+                                                <rect key="frame" x="-4" y="569" width="375" height="98"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Z7l-eI-r87">
-                                                <rect key="frame" x="42" y="584" width="291" height="83"/>
+                                                <rect key="frame" x="42" y="589" width="291" height="83"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="26"/>
@@ -218,14 +217,14 @@ SplitIt will handle the bill for you.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="ColorImage" width="375" height="98"/>
         <image name="SplitIt-Logo" width="224" height="111"/>
         <image name="back-right-icon" width="20" height="19"/>
+        <image name="button-background-gradient" width="375" height="118"/>
         <image name="primary-button-shell" width="291" height="83"/>
-        <image name="welcome-1" width="375" height="441"/>
         <image name="welcome-2" width="375" height="441"/>
         <image name="welcome-3" width="375" height="441"/>
-        <image name="welcome-4" width="375" height="441"/>
+        <image name="welcome1" width="375" height="441"/>
+        <image name="welcome4" width="292" height="195"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

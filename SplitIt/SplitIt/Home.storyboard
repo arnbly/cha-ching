@@ -98,11 +98,17 @@
                                         <rect key="frame" x="15" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="settings-icon"/>
+                                        <connections>
+                                            <action selector="didPressSettings:" destination="R8K-sJ-pwW" eventType="touchUpInside" id="lr5-n2-vga"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD4-ka-uae">
                                         <rect key="frame" x="320" y="30" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="history-icon"/>
+                                        <connections>
+                                            <action selector="didPressHistory:" destination="R8K-sJ-pwW" eventType="touchUpInside" id="kfo-nb-77a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,7 +125,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOP-fV-48c">
-                                        <rect key="frame" x="-5" y="26" width="312" height="53"/>
+                                        <rect key="frame" x="-5" y="30" width="312" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Thin" family="SF Compact Display" pointSize="70"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -147,7 +153,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTI-iF-8hV">
-                                        <rect key="frame" x="-5" y="26" width="302" height="53"/>
+                                        <rect key="frame" x="-5" y="30" width="302" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Thin" family="SF Compact Display" pointSize="70"/>
                                         <color key="textColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -530,7 +536,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="79" id="NGi-Le-1mf" customClass="OwedTableViewCell" customModule="SplitIt" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="79" id="NGi-Le-1mf" customClass="owedSwipeTableCell" customModule="SplitIt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGi-Le-1mf" id="Xci-je-UsH">
@@ -572,10 +578,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="profileImage" destination="Olx-ge-RGT" id="3gv-DL-z5T"/>
-                                            <outlet property="transAmountLabel" destination="nIj-35-Up5" id="CPr-8V-djH"/>
-                                            <outlet property="transDescriptionLabel" destination="vQI-3H-VGg" id="G6J-Hn-d2B"/>
-                                            <outlet property="userNameLabel" destination="V2g-1R-bue" id="t5U-yh-4FR"/>
+                                            <outlet property="profileImage" destination="Olx-ge-RGT" id="BKo-Ng-h68"/>
+                                            <outlet property="transAmountLabel" destination="nIj-35-Up5" id="OyK-Jd-AyP"/>
+                                            <outlet property="transDescriptionLabel" destination="vQI-3H-VGg" id="tXa-ld-chg"/>
+                                            <outlet property="userNameLabel" destination="V2g-1R-bue" id="xeY-F7-vYF"/>
                                             <segue destination="zPo-p6-Zy8" kind="show" identifier="detailViewSegue" id="S6V-Hj-KfX"/>
                                         </connections>
                                     </tableViewCell>
@@ -727,7 +733,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="profileImage" destination="Mmv-dT-iKv" id="6Q5-9j-bbw"/>
-                        <outlet property="tableView" destination="7dx-XY-Ytg" id="A1W-h8-iZU"/>
+                        <outlet property="tableView" destination="7dx-XY-Ytg" id="8VP-PK-REa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gM-6M-id6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -748,6 +754,6 @@
         <image name="userImage-Blank" width="124" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q8b-PG-l7U"/>
+        <segue reference="u5x-ey-YUn"/>
     </inferredMetricsTieBreakers>
 </document>

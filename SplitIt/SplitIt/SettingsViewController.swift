@@ -15,7 +15,6 @@ import FirebaseStorage
 
 class SettingsViewController: UIViewController {
     
-    
     @IBOutlet weak var userImage: UIImageView!
     
     //UIButtons
@@ -34,15 +33,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*
-         mainUserName.text = name
-         userName.text = name
-         userEmail.text = email
-         userImage.image = profilePicture
-         */
-        
-        
+    
         userCurrency.text = "USD"
         edittedCurr = userCurrency.text!
         if curr != "" {
@@ -61,13 +52,8 @@ class SettingsViewController: UIViewController {
         view.addSubview(signOutButton)
         signOutButton.addTarget(self, action: #selector(handlesignOutButton), for: .touchUpInside)
         
-        
-        
         //Check to see if user has signed in
         ifUserIsLoggedIn()
-        
-        
-        
     }
     
     func ifUserIsLoggedIn() {
@@ -183,9 +169,6 @@ class SettingsViewController: UIViewController {
             "SettingsCurrencyController") as! SettingsCurrencyViewController
         settingscurrencycontroller.currency = edittedCurr
         self.present(settingscurrencycontroller, animated: true, completion: nil)
-        
-        
-        
     }
     
     

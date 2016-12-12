@@ -83,5 +83,26 @@ class HomeViewController: UIViewController {
     }
 
     
+    @IBAction func didPressSettings(_ sender: Any) {
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "SettingsSB") as UIViewController
+        
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func didPressHistory(_ sender: Any) {
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "History", bundle: nil)
+        
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "HistoryFlowSB") as UIViewController
+        
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
+    }
 
 }

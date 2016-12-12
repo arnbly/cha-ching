@@ -13,6 +13,17 @@ class PersonDetailViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    var userData: UserDataViewController = UserDataViewController()
+    
+    var transAmounts = [Double]()
+    var transDescriptions = [String]()
+    
+    var owedTransAmounts = [Double]()
+    var owedAmount = Double()
+    var owedCount = 0 as Int
+    let formatter = NumberFormatter()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +32,23 @@ class PersonDetailViewController: UIViewController, UITableViewDataSource {
         
         tableView.dataSource = self
         self.tableView.rowHeight = 90
+        
+        transAmounts = userData.transAmounts
+        
+        //Set up array for cells
+        for transAmount in transAmounts {
+            if transAmount <= 0 {
+                let signFlip = transAmount * -1
+                let index = transAmounts.index(of: transAmount)
+                owedAmount += signFlip
+                owedCount += 1
+                
+                owedTransAmounts.append(signFlip)
+                transDescriptions.append(userData.transDescriptions[index!])
+            } else {
+                print("skip lent payment")
+            }
+        }
 
 
     }
@@ -43,19 +71,18 @@ class PersonDetailViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailTableCell") as! DetailTableViewCell
-//        
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = .currency
-//        
-//        let userName = userNames[indexPath.row]
-//        let userImage = userProfile[indexPath.row]
-//        let transaction = owedTransAmounts[indexPath.row]
-//        let description = transDescriptions[indexPath.row]
-//        
-//        cell.userNameLabel.text = userName
-//        cell.profileImage.image = userImage
-//        cell.transAmountLabel.text = formatter.string(from: transaction as NSNumber)
-//        cell.transDescriptionLabel.text = description
+        
+        formatter.numberStyle = .currency
+        
+        let userName = "James McDaniel"
+        let userImage = profileImage.image
+        let transaction = owedTransAmounts[indexPath.row]
+        let description = transDescriptions[indexPath.row]
+        
+        cell.userNameLabel.text = userName
+        cell.profileImage.image = userImage
+        cell.transAmountLabel.text = formatter.string(from: transaction as NSNumber)
+        cell.transDescriptionLabel.text = description
         
         return cell
     }

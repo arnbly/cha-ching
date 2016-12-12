@@ -21,6 +21,13 @@ class HistoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didTapBack(_ sender: Any) {
+        let homestoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let homecontroller = homestoryboard.instantiateViewController(withIdentifier:
+            "HomeInitialController") as! HomeViewController
+        self.present(homecontroller, animated: true, completion: nil)
+    
+    }
 
     /*
     // MARK: - Navigation

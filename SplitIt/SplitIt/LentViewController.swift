@@ -33,6 +33,7 @@ class LentViewController: UIViewController, UITableViewDataSource {
     var archiveIconOriginal: CGPoint!
     
     var messageOffset: CGFloat!
+    var cell: LentTableViewCell!
     
     let greenColor = UIColor(red: 85/255, green: 229/255, blue: 179/255, alpha: 1)
     let purpleColor = UIColor(red: 127/255, green: 146/255, blue: 255/255, alpha: 1)
@@ -88,7 +89,7 @@ class LentViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lentTableCell") as! LentTableViewCell
+        cell = tableView.dequeueReusableCell(withIdentifier: "lentTableCell") as! LentTableViewCell
         
         formatter.numberStyle = .currency
         
@@ -136,6 +137,7 @@ class LentViewController: UIViewController, UITableViewDataSource {
         let translation = sender.translation(in: view)
         let cell = sender.view as! LentTableViewCell
         let translateObject = cell.tileView as! UIView
+        let indexPath = self.tableView.indexPath(for: cell)!
         
         let firstStep: CGFloat = 65
         let secondStep: CGFloat = -65
@@ -169,32 +171,33 @@ class LentViewController: UIViewController, UITableViewDataSource {
                 //Clear Message Right
                 UIView.animate(withDuration:0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options:[] ,
                                animations: { () -> Void in
-                                //code
-                                translateObject.center = CGPoint(x: self.cellOriginalCenter.x + 375, y: 45)
-                                //Hide Archive icon for clear
-                                cell.checkIcon.alpha = 0
+                                
                 }, completion: nil)
                 
-                //Animate Scroll View Up
-                UIView.animate(withDuration: 0.4, delay: 0.4, animations: {
+                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: { 
+                    //code
+                    translateObject.center = CGPoint(x: self.cellOriginalCenter.x + 375, y: 45)
+                    //Hide Archive icon for clear
+                    cell.checkIcon.alpha = 0
+                }, completion: { (finished: Bool) in
                     print("Need to call clear view")
                     
-                    //self.lentAmount = self.lentAmount - Double(cell.transAmountLabel.text!)!
+                    self.lentAmount = self.lentAmount - self.lentTransAmounts[indexPath.row]
                     self.arrayCount -= 1
                     self.lentLabel.text = self.formatter.string(from: self.lentAmount as NSNumber)
                     self.countLabel.text = "To " + String(self.arrayCount) + " people"
                     
-                    let temp = cell.userNameLabel.text! as String
-                    let arrayLoc = self.userNames.index(of: temp)
-                    
                     //remove data from array
-                    self.userNames.remove(at: arrayLoc!)
-                    self.userProfile.remove(at: arrayLoc!)
-                    self.lentTransAmounts.remove(at: arrayLoc!)
-                    self.transDescriptions.remove(at: arrayLoc!)
+                    self.userNames.remove(at: indexPath.row)
+                    self.userProfile.remove(at: indexPath.row)
+                    self.lentTransAmounts.remove(at: indexPath.row)
+                    self.transDescriptions.remove(at: indexPath.row)
+                    
+                    self.tableView.deleteRows(at: [indexPath], with: .fade);
+                    
+                    print("deleted successfully")
                     
                     //cell.
-                    
                     self.tableView.reloadData()
                 })
                 
@@ -206,7 +209,27 @@ class LentViewController: UIViewController, UITableViewDataSource {
                                 translateObject.center = CGPoint(x: self.cellOriginalCenter.x - 375, y: 45)
                                 //Hide Archive icon for clear
                                 cell.cashIcon.alpha = 0
-                }, completion: nil)
+                }, completion: {(finished: Bool) in
+                    print("Need to call clear view")
+                    
+                    self.lentAmount = self.lentAmount - self.lentTransAmounts[indexPath.row]
+                    self.arrayCount -= 1
+                    self.lentLabel.text = self.formatter.string(from: self.lentAmount as NSNumber)
+                    self.countLabel.text = "To " + String(self.arrayCount) + " people"
+                    
+                    //remove data from array
+                    self.userNames.remove(at: indexPath.row)
+                    self.userProfile.remove(at: indexPath.row)
+                    self.lentTransAmounts.remove(at: indexPath.row)
+                    self.transDescriptions.remove(at: indexPath.row)
+                    
+                    self.tableView.deleteRows(at: [indexPath], with: .fade);
+                    
+                    print("deleted successfully")
+                    
+                    //cell.
+                    self.tableView.reloadData()
+                })
                 
             } else if translation.x > -75 && translation.x < 75 {
                 //Show List View
@@ -216,6 +239,6 @@ class LentViewController: UIViewController, UITableViewDataSource {
                 })
             }
         }
-    }
+    }//End Did Pan Method
 }
 

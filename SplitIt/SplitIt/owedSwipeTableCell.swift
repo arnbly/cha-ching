@@ -1,15 +1,15 @@
 //
-//  OwedTableViewCell.swift
-//  SplitIt
+//  owedSwipeTableCell.swift
+//  Pods
 //
-//  Created by Aaron Bailey on 12/7/16.
-//  Copyright © 2016 Aaron Bailey. All rights reserved.
+//  Created by Aaron Bailey on 12/11/16.
+//
 //
 
 import UIKit
 import MGSwipeTableCell
 
-class OwedTableViewCell: UITableViewCell {
+class owedSwipeTableCell: MGSwipeTableCell {
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -20,11 +20,11 @@ class OwedTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

@@ -12,14 +12,10 @@ class SettingsCurrencyViewController: UIViewController {
     
     
     @IBOutlet weak var dollarButton: UIButton!
-    
     @IBOutlet weak var poundButton: UIButton!
-    
     @IBOutlet weak var euroButton: UIButton!
     
-    
     var currency = String()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,18 +83,21 @@ class SettingsCurrencyViewController: UIViewController {
         
     }
     
-    
-    
     @IBAction func didTapSaveCurrencyButton(_ sender: UIButton) {
+        // [1] Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         
-        let settingsstoryboard = UIStoryboard(name: "Settings", bundle: nil)
-        let settingscontroller = settingsstoryboard.instantiateViewController(withIdentifier:
-            "SettingsSB") as! SettingsViewController
-        settingscontroller.curr = currency
-        print("settingsController.curr:", settingscontroller.curr)
+        // [2] Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "SettingsSB") as! SettingsViewController
         
-        self.present(settingscontroller, animated: true, completion: nil)
+        // [3] Display the new view controller.
+        present(controller, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destinationViewController = segue.destination as! SettingsViewController
         
+        destinationViewController.userCurrency.text = currency
         
     }
     
