@@ -91,7 +91,7 @@ class PayReviewViewController: UIViewController, PayPalPaymentDelegate {
         
         let total = subtotal.adding(shipping).adding(tax)
         
-        let payment = PayPalPayment(amount: total, currencyCode: "USD", shortDescription: "Pay Clare for Dinner", intent: .sale)
+        let payment = PayPalPayment(amount: total, currencyCode: "USD", shortDescription: "Pay Kristen for Dinner", intent: .sale)
         
         payment.items = items
         payment.paymentDetails = paymentDetails
