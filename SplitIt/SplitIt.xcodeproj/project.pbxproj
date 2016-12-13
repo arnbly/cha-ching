@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0AF7871DFFB91A00ED52C4 /* HistoryFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AF7861DFFB91A00ED52C4 /* HistoryFriendsTableViewCell.swift */; };
 		3D4DCF671DF3931A00CDF846 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DCF661DF3931A00CDF846 /* FriendsCell.swift */; };
 		3D62924F1DF417D700FCA33E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62924E1DF417D700FCA33E /* CustomTableViewCell.swift */; };
 		3D731F241DF6959A00CE76E8 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D731F231DF6959A00CE76E8 /* NewTableViewCell.swift */; };
@@ -91,6 +92,7 @@
 /* Begin PBXFileReference section */
 		1392A2DA28AB4174D70ADD35 /* Pods-SplitIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitIt/Pods-SplitIt.debug.xcconfig"; sourceTree = "<group>"; };
 		38087CDCCCA2B4E126BFF620 /* Pods-SplitItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitItUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitItUITests/Pods-SplitItUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D0AF7861DFFB91A00ED52C4 /* HistoryFriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		3D4DCF661DF3931A00CDF846 /* FriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		3D62924E1DF417D700FCA33E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		3D731F231DF6959A00CE76E8 /* NewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				9316DD0B1DED5DDF00ED01E7 /* History.storyboard */,
+				3D0AF7861DFFB91A00ED52C4 /* HistoryFriendsTableViewCell.swift */,
 				9316DD1B1DED5F5200ED01E7 /* HistoryViewController.swift */,
 			);
 			name = History;
@@ -697,6 +700,7 @@
 				93E287B01DFCB47800C03AA8 /* LentViewController.swift in Sources */,
 				9316DCC91DED384600ED01E7 /* ViewController.swift in Sources */,
 				9316DD361DED618900ED01E7 /* PaySuccessViewController.swift in Sources */,
+				3D0AF7871DFFB91A00ED52C4 /* HistoryFriendsTableViewCell.swift in Sources */,
 				9316DD341DED617300ED01E7 /* PayReviewViewController.swift in Sources */,
 				9316DD2E1DED611100ED01E7 /* RequestReviewViewController.swift in Sources */,
 				9316DD3A1DED620000ED01E7 /* SettingsCurrencyViewController.swift in Sources */,
