@@ -15,10 +15,10 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
-    let recents = ["Aaron Bailey", "Lauren Tindal", "Charlie Codepath", "Emmeline Kim", "Amrutha Krishnan", "Alex Watson", "Andrea Tovar", "Lisa Johnson", "Linda Thompson", "Laura Lee"]
+     var userData: UserDataViewController = UserDataViewController()
     
     //User Profile Photos
-    var userProfile: [UIImage] = [
+    /*var userProfile: [UIImage] = [
         UIImage(named: "m7.png")!,
         UIImage(named: "f2.png")!,
         UIImage(named: "m1.png")!,
@@ -29,7 +29,7 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         UIImage(named: "f4.png")!,
         UIImage(named: "f6.png")!,
         UIImage(named: "f7.png")!,
-        ]
+        ]*/
     
     var filteredTableData = [String]()
     var resultSearchController = UISearchController()
@@ -47,7 +47,6 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         formatter.numberStyle = .currency
         totalLabel.text = formatter.string(from: myNumber as NSNumber)
 
-        
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.allowsSelection = true
@@ -88,8 +87,9 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
         
         filteredTableData.removeAll(keepingCapacity: false)
         
+        
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
-        let array = (recents as NSArray).filtered(using: searchPredicate)
+        let array = (userData.userNames as NSArray).filtered(using: searchPredicate)
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
@@ -125,15 +125,15 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
             return self.filteredTableData.count
         }
         else {
-            return self.recents.count
+            return self.userData.userNames.count
         }
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! FriendsCell
-        let recent = recents[indexPath.row]
-        let userImage = userProfile[indexPath.row]
+        //let recent = recents[indexPath.row]
+        //let userImage = userProfile[indexPath.row]
         
         if (self.resultSearchController.isActive) {
             cell.label.text = filteredTableData[indexPath.row]
@@ -142,8 +142,8 @@ class RequestWithViewController: UIViewController, UITableViewDelegate, UITableV
             return cell
         }
         else {
-            cell.label.text = recents[indexPath.row]
-            cell.profileImage.image = userImage
+            cell.label.text = userData.userNames[indexPath.row]
+            cell.profileImage.image = userData.userProfile[indexPath.row]
             cell.selectDefault.isHidden = false
             cell.selectActive.isHidden = true
 

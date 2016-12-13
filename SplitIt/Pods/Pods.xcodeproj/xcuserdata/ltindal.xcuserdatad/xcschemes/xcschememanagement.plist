@@ -34,6 +34,11 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>MGSwipeTableCell.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>Pods-SplitIt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -55,6 +60,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -74,6 +84,11 @@
 			<true/>
 		</dict>
 		<key>479842CAB034CE431ED299368E322072</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4E1263BFF45F6446CF3DE29AE234C893</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -103,12 +118,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9206D80022412634ED3F45C697E1DAF0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DA6625AE97C3F56DE6BDFB2BDABD9AEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0B412DD0C2AB78AA1F60DDFFDCC0882</key>
 		<dict>
 			<key>primary</key>
 			<true/>

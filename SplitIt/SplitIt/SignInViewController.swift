@@ -189,25 +189,17 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
 <<<<<<< HEAD
                             self.present(settingscontroller, animated: true, completion: nil)*/
  
- 
-                            
-=======
+
                             //self.present(settingscontroller, animated: true, completion: nil)
                             self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
 
->>>>>>> master
                         }
                         
                         print(result as Any)
                         
                     }
             }
-<<<<<<< HEAD
-            
-          self.performSegue(withIdentifier: "welcomePageSegue", sender: nil)
-            
-=======
->>>>>>> master
+
         })
     }
 }

@@ -759,7 +759,7 @@
                 <navigationController navigationBarHidden="YES" id="joc-3J-fET" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KQj-K2-5QR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KQj-K2-5QR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
