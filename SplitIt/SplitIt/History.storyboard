@@ -90,7 +90,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="95" id="Rhf-Eh-qA6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="95" id="Rhf-Eh-qA6" customClass="HistoryFriendsTableViewCell" customModule="SplitIt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rhf-Eh-qA6" id="C5h-Or-qod">
@@ -131,12 +131,21 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountFor" destination="caJ-GC-mmV" id="H7i-S7-hJL"/>
+                                            <outlet property="payAmount" destination="fy3-aG-PEu" id="3kj-vO-Bev"/>
+                                            <outlet property="profilePicture" destination="ve9-t4-QMR" id="RLY-se-53Q"/>
+                                            <outlet property="userName" destination="2TB-1q-tYq" id="O8J-ld-uMb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.49803921569999998" green="0.57254901960000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="historyTableView" destination="X47-7y-ZAB" id="SZP-GT-i3o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tb-QC-8fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
