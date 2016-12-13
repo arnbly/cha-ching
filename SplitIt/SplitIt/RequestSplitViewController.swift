@@ -14,12 +14,14 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
     var text: String!
     let names = ["Aaron Bailey", "Amrutha Krishnan", "Lauren Tindal"]
     
+    var userData: UserDataViewController = UserDataViewController()
+    
     //User Profile Photos
-    var userProfile: [UIImage] = [
+    /*var userProfile: [UIImage] = [
         UIImage(named: "m7.png")!,
         UIImage(named: "f2.png")!,
         UIImage(named: "f1.png")!,
-        ]
+        ]*/
     
     var digits = [Int]()
     
@@ -81,12 +83,12 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         let userPayment = String(describing: payments)
         var cell:UITableViewCell?
         let name = names[indexPath.row]
-        let userImage = userProfile[indexPath.row]
+        //let userImage = userProfile[indexPath.row]
         
         if tableView == self.tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTable") as! CustomTableViewCell
-            cell.userName.text = name
-            cell.userPhoto.image = userImage
+            cell.userName.text = userData.splitNames[indexPath.row]
+            cell.userPhoto.image = userData.splitProfile[indexPath.row]
             cell.userPayment.text = userPayment
             return cell
             
@@ -94,8 +96,8 @@ class RequestSplitViewController: UIViewController, UITableViewDelegate, UITable
         
         if tableView == self.tableView2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewTable") as! NewTableViewCell
-            cell.userName.text = name
-            cell.profileImage.image = userImage
+            cell.userName.text = userData.splitNames[indexPath.row]
+            cell.profileImage.image = userData.splitProfile[indexPath.row]
             return cell
             
             let text = cell.userPayment.text!
