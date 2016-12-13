@@ -14,7 +14,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var historyTableView: UITableView!
     
     var text: String!
-    let names = ["Clare Corthell", "Lauren Tindal"]
+    let names = ["Kristen Bailey", "Lauren Tindal"]
     let desc = ["Paid for Dinner, 12/13/16", "Dinner","Dinner and Drinks","Lunch","Grocery"]
     let amt = ["$25","$15","$20", "$12","$10"]
     
